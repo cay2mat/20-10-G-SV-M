@@ -1745,7 +1745,9 @@ h1, h2, .elegant-text { font-family: 'Playfair Display', serif; }
 }
 
 .music-trigger-btn {
-    width: 70%;
+    flex: 1;
+    min-width: 0;
+    width: auto;
     max-width: 240px;
     background: rgba(255, 255, 255, 0.9);
     border: 1.5px solid #ffb3c6;
@@ -1758,14 +1760,27 @@ h1, h2, .elegant-text { font-family: 'Playfair Display', serif; }
     box-shadow: 0 4px 12px rgba(255, 179, 198, 0.15);
     transition: all 0.3s ease;
     animation: fadeInTab 0.8s ease-out;
-    margin-top: 0 !important; /* Đã xóa khoảng cách thừa */
+    margin-top: 0 !important;
 }
 
-.music-trigger-btn:hover {
-    background: #fff0f3;
-    border-color: #ff4d6d;
-    box-shadow: 0 6px 16px rgba(255, 77, 109, 0.25);
-    transform: translateY(-2px);
+/* Cho tên bài hát tự cắt bằng dấu ... nếu quá dài */
+.music-trigger-left {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    overflow: hidden;
+    min-width: 0;
+    flex: 1;
+}
+#music-trigger-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Nút về tinh cầu: không cho co lại */
+.back-home-btn {
+    flex-shrink: 0;
 }
 
 /* Khung bọc nút loa và thanh trượt */
@@ -3029,4 +3044,109 @@ h1, h2, .elegant-text { font-family: 'Playfair Display', serif; }
 }
 #tap-to-play {
     display: none !important;
+}
+/* ================= MÀN HÌNH CHỜ BẮT ĐẦU (SANG TRỌNG) ================= */
+#start-screen {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: #050814;
+    background-image: 
+        radial-gradient(circle at 50% 50%, rgba(255, 77, 109, 0.15) 0%, transparent 60%),
+        radial-gradient(circle at 20% 80%, rgba(26, 11, 31, 0.8) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(26, 11, 31, 0.8) 0%, transparent 50%);
+    z-index: 9999999; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1), transform 1.2s ease;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+/* Hiệu ứng màn hình tan biến khi click */
+#start-screen.fade-out {
+    opacity: 0;
+    transform: scale(1.1); /* Phóng to nhẹ tạo cảm giác bay vào trong */
+    pointer-events: none;
+}
+
+.start-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    position: relative;
+}
+
+/* Vòng sáng mờ ảo phía sau chữ */
+.sparkle-ring {
+    position: absolute;
+    width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(255, 77, 109, 0.3) 0%, transparent 70%);
+    border-radius: 50%;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    animation: pulseGlowRing 3s infinite alternate;
+    z-index: -1;
+}
+
+@keyframes pulseGlowRing {
+    0% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.5; }
+    100% { transform: translate(-50%, -50%) scale(1.3); opacity: 1; }
+}
+
+.start-subtitle {
+    color: #E2E8F0;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    opacity: 0.8;
+    font-family: 'Inter', sans-serif;
+}
+
+.start-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 4.5rem;
+    color: #F4D06F;
+    text-shadow: 0 0 20px rgba(244, 208, 111, 0.6), 0 0 40px rgba(255, 77, 109, 0.4);
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+.start-title span {
+    font-size: 2.5rem;
+    color: #ff4d6d;
+    vertical-align: middle;
+}
+
+.start-heart {
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    animation: heartbeatStart 1.5s infinite ease-in-out;
+    filter: drop-shadow(0 0 15px rgba(255, 77, 109, 0.8));
+}
+
+@keyframes heartbeatStart {
+    0%, 100% { transform: scale(1); }
+    15% { transform: scale(1.3); }
+    30% { transform: scale(1); }
+    45% { transform: scale(1.3); }
+}
+
+.start-hint {
+    color: #ff9ebb;
+    font-size: 1.1rem;
+    font-family: 'Dancing Script', cursive;
+    letter-spacing: 1px;
+    animation: floatTextHint 2s infinite ease-in-out;
+    text-shadow: 0 0 10px rgba(255, 77, 109, 0.5);
+}
+
+@keyframes floatTextHint {
+    0%, 100% { transform: translateY(0); opacity: 0.7; }
+    50% { transform: translateY(-8px); opacity: 1; }
 }

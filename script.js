@@ -3258,3 +3258,129 @@ window.addEventListener('resize', () => {
         autoFitText(document.getElementById('flower-name'), 14);
     }, 150);
 });
+/* ========================================================
+   NÚT QUAY VỀ MÀN HÌNH TINH CẦU BAN ĐẦU
+======================================================== */
+function resetToGalaxyHome() {
+    // 1. Dừng nhạc
+    if (typeof bgMusic !== 'undefined') {
+        bgMusic.pause();
+        bgMusic.currentTime = 0;
+    }
+
+    // 2. Reset toàn bộ state
+    flowerBloomed = false;
+    isZooming = false;
+    isDraggingGalaxy = false;
+    rotVx = 0;
+    rotVy = 0;
+    letterState = 0;
+    enteredPasscode = "";
+    currentPerson = null;
+    isGalleryEditing = false;
+
+    // 3. Hiện lại canvas WebGL (đã bị ẩn khi zoom vào sao)
+    const webglContainer = document.getElementById('webgl-container');
+    if (webglContainer) webglContainer.style.display = 'block';
+
+    // 4. Đưa camera về vị trí ban đầu
+    if (camera) {
+        const isMobile = window.innerWidth <= 768;
+        camera.position.set(0, 0, isMobile ? 240 : 160);
+        camera.lookAt(0, 0, 0);
+    }
+    if (galaxyGroup) {
+        galaxyGroup.rotation.set(0, 0, 0);
+    }
+
+    // 5. Reset màn hình hoa hồng / tulip
+    const flowerScreen = document.getElementById('screen-flower');
+    if (flowerScreen) flowerScreen.classList.remove('theme-tulip');
+
+    ['flower-top-title', 'flower-click-instruction', 'flower-glow'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.classList.remove('show');
+    });
+
+    const roseSvg = document.getElementById('flower-svg');
+    if (roseSvg) {
+        roseSvg.classList.remove('grow-active');
+        roseSvg.style.display = 'block';
+    }
+    const bloomedRose = document.getElementById('bloomed-rose');
+    if (bloomedRose) bloomedRose.classList.remove('sway');
+
+    const tulipCss = document.getElementById('tulip-css-container');
+    if (tulipCss) tulipCss.style.display = 'none';
+
+    // 6. Reset phong bì thư
+    const envContainer = document.getElementById('envelope-container');
+    if (envContainer) envContainer.classList.remove('step-1', 'step-2', 'from-step-2');
+
+    // 7. Đóng modal & dừng video quà tặng nếu đang mở
+    const videoModal = document.getElementById('video-modal');
+    if (videoModal) videoModal.classList.add('hidden');
+    const musicPopup = document.getElementById('music-popup-modal');
+    if (musicPopup) musicPopup.classList.add('hidden');
+    const giftVideo = document.getElementById('gift-video');
+    if (giftVideo) { giftVideo.pause(); giftVideo.currentTime = 0; }
+
+    // 8. Reset mật mã & ảnh đại diện đã hiển thị
+    if (typeof updateDots === 'function') updateDots(0);
+    const unlockError = document.getElementById('unlock-error');
+    if (unlockError) unlockError.classList.add('hidden');
+
+    // 9. Quay lại màn hình Galaxy
+    transitionTo('galaxy');
+
+    // 10. Khởi động lại vòng lặp animation 3D
+    setTimeout(() => {
+        if (typeof animateGalaxy === 'function') animateGalaxy();
+    }, 100);
+}
+
+// Gắn sự kiện khi DOM đã sẵn sàng
+document.addEventListener('DOMContentLoaded', () => {
+    const backBtn = document.getElementById('back-to-galaxy-btn');
+    if (backBtn) {
+        backBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (typeof playArtisticTabSound === 'function') playArtisticTabSound();
+            resetToGalaxyHome();
+        });
+    }
+});
+/* ========================================================
+   XỬ LÝ MÀN HÌNH CHỜ: ÉP FULLSCREEN & BẬT ÂM THANH
+======================================================== */
+document.addEventListener('DOMContentLoaded', () => {
+    const startScreen = document.getElementById('start-screen');
+
+    if (startScreen) {
+        // Khi người dùng chạm/click vào bất kỳ đâu trên màn hình chờ
+        startScreen.addEventListener('click', function() {
+            // 1. Yêu cầu trình duyệt bật toàn màn hình
+            const docEl = document.documentElement;
+            if (docEl.requestFullscreen) {
+                docEl.requestFullscreen().catch(err => console.log("Lỗi Fullscreen:", err));
+            } else if (docEl.webkitRequestFullscreen) { /* Cho Safari cũ */
+                docEl.webkitRequestFullscreen();
+            } else if (docEl.msRequestFullscreen) { /* Cho IE11 */
+                docEl.msRequestFullscreen();
+            }
+
+            // 2. Đánh thức AudioContext để nhạc có thể phát ngay sau đó
+            if (typeof getAudioContext === 'function') {
+                getAudioContext(); 
+            }
+
+            // 3. Làm mờ và ẩn màn hình chờ đi (hiệu ứng fade out)
+            startScreen.classList.add('fade-out');
+            
+            // Xóa hẳn khỏi DOM sau khi mờ xong để không cản trở click
+            setTimeout(() => {
+                startScreen.style.display = 'none';
+            }, 800); 
+        });
+    }
+});
