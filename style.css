@@ -2850,30 +2850,52 @@ h1, h2, .elegant-text { font-family: 'Playfair Display', serif; }
 .add-gallery-btn:hover .add-icon {
     transform: scale(1.2); /* Dấu + to ra một chút xíu */
 }
-/* ================= CSS CHẾ ĐỘ CHỈNH SỬA ALBUM ================= */
-/* Nút bật tắt chế độ chỉnh sửa (JS tự tạo) */
-/* Nút bật tắt chế độ chỉnh sửa (Nút tròn góc dưới phải) */
+/* ==========================================================
+   NÚT CHỈNH SỬA ALBUM — ĐÃ ĐƯA RA <body> ĐỂ THOÁT STACKING CONTEXT
+   Mặc định ẩn, chỉ hiện khi có class .visible (khi ở tab Image)
+========================================================== */
 .toggle-edit-gallery-btn {
-    position: absolute;
-    bottom: 20px;
+    position: fixed;
+    bottom: 100px;        /* Mobile: nằm trên thanh tab bar */
     right: 20px;
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.95);
     border: 2px solid #ffb3c6;
     color: #ff4d6d;
-    font-size: 22px; /* Kích thước icon bút chì */
-    display: flex;
+    font-size: 22px;
+    display: none;        /* Ẩn mặc định */
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    z-index: 100; /* Luôn nổi lên trên cùng */
+    z-index: 99999;       /* Trên mọi thứ, kể cả tab bar */
     backdrop-filter: blur(5px);
     box-shadow: 0 4px 15px rgba(255, 77, 109, 0.3);
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     padding: 0;
     margin: 0;
+}
+
+/* 🟢 CHỈ HIỆN KHI CÓ CLASS .visible */
+.toggle-edit-gallery-btn.visible {
+    display: flex;
+}
+
+.toggle-edit-gallery-btn:hover {
+    background: #ff4d6d;
+    color: white;
+    transform: scale(1.15) rotate(10deg);
+    box-shadow: 0 6px 20px rgba(255, 77, 109, 0.5);
+    border-color: #ff4d6d;
+}
+
+/* PC: đặt vị trí khác cho cân đối với thẻ 820px */
+@media (min-width: 769px) {
+    .toggle-edit-gallery-btn {
+        bottom: 40px;
+        right: max(40px, calc((100vw - 820px) / 2 + 20px));
+    }
 }
 
 /* Hiệu ứng khi lướt chuột qua (đổi màu và hơi xoay nhẹ) */

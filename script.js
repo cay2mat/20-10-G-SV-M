@@ -2119,6 +2119,15 @@ function switchTab(tabId) {
     conveyorTracks.forEach(track => {
         track.style.animationPlayState = isImageTab ? 'running' : 'paused';
     });
+        // 🟢 Bật/tắt nút chỉnh sửa album theo tab đang active
+    const editBtn = document.getElementById('toggle-gallery-edit');
+    if (editBtn) {
+        if (tabId === 'tab-sec4') {
+            editBtn.classList.add('visible');
+        } else {
+            editBtn.classList.remove('visible');
+        }
+    }
 }
 
 /* ========================================================
@@ -2867,20 +2876,24 @@ function setupGalleryData() {
     parent.style.paddingBottom = '70px'; // Tạo khoảng trống để nút không che mất ảnh cuối cùng
     
     let editToggleBtn = document.getElementById('toggle-gallery-edit');
-    
-    if (!editToggleBtn) {
-        editToggleBtn = document.createElement('button');
-        editToggleBtn.id = 'toggle-gallery-edit';
-        editToggleBtn.className = 'toggle-edit-gallery-btn';
-        // Đặt nút vào cuối phần tử cha để nó nổi lên trên
-        parent.appendChild(editToggleBtn); 
-        
-        editToggleBtn.onclick = () => {
-            isGalleryEditing = !isGalleryEditing; 
-            renderGalleryUI(editToggleBtn, galleryGrid); 
-        };
-    }
-    
+
+// 1. Tạo nếu chưa có
+if (!editToggleBtn) {
+    editToggleBtn = document.createElement('button');
+    editToggleBtn.id = 'toggle-gallery-edit';
+    editToggleBtn.className = 'toggle-edit-gallery-btn';
+}
+
+// 2. LUÔN gắn vào <body> để thoát stacking context của .pink-card
+if (editToggleBtn.parentElement !== document.body) {
+    document.body.appendChild(editToggleBtn);
+}
+
+// 3. Gán lại onclick cho user hiện tại
+editToggleBtn.onclick = () => {
+    isGalleryEditing = !isGalleryEditing;
+    renderGalleryUI(editToggleBtn, galleryGrid);
+};
     function renderGalleryUI(btn, grid) {
         grid.innerHTML = '';
         
@@ -3329,7 +3342,8 @@ function resetToGalaxyHome() {
     if (typeof updateDots === 'function') updateDots(0);
     const unlockError = document.getElementById('unlock-error');
     if (unlockError) unlockError.classList.add('hidden');
-
+    const editBtn = document.getElementById('toggle-gallery-edit');
+    if (editBtn) editBtn.classList.remove('visible');
     // 9. Quay lại màn hình Galaxy
     transitionTo('galaxy');
 
