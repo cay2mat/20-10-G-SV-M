@@ -2232,10 +2232,22 @@ h1, h2, .elegant-text { font-family: 'Playfair Display', serif; }
     box-shadow: 0 6px 15px rgba(255, 77, 109, 0.4);
 }
 
-@media (min-width: 769px) {
+@media (max-width: 768px) {
     .gallery-grid {
-        grid-template-columns: repeat(3, 1fr); /* PC: 3 cột */
-        max-height: 400px;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 15px;
+        margin-top: 20px;
+        /* Bỏ giới hạn chiều cao và thanh cuộn riêng để cuộn toàn màn hình */
+        max-height: none !important; 
+        overflow-y: visible !important;
+        padding: 5px 5px 100px 5px; /* Thêm padding dưới đáy để không bị thanh menu che */
+    }
+
+    /* Cho phép toàn bộ khung nội dung tab có thể cuộn mượt mà */
+    .pink-tab-content {
+        height: calc(100vh - 100px);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
     }
 }
 /* ==========================================================

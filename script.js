@@ -3023,8 +3023,8 @@ editToggleBtn.onclick = () => {
                     }, { passive: true });
 
                     wrapper.addEventListener('touchmove', (e) => {
-                        if (draggedItemIndex === null) return;
-                        e.preventDefault();
+    if (draggedItemIndex === null) return;
+
                         const touch = e.touches[0];
                         const targetElement = document.elementFromPoint(touch.clientX, touch.clientY);
                         document.querySelectorAll('.gallery-item-wrapper').forEach(w => w.classList.remove('drag-over'));
