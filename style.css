@@ -1449,7 +1449,7 @@ h1, h2, .elegant-text { font-family: 'Playfair Display', serif; }
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px); /* Dòng này bắt buộc phải có để iPhone/Safari hiển thị được blur */
     
-    z-index: 99999;
+     z-index: 2147483647;   
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2233,21 +2233,43 @@ h1, h2, .elegant-text { font-family: 'Playfair Display', serif; }
 }
 
 @media (max-width: 768px) {
+    /* 1. Cho phép toàn bộ màn hình chứa tab có thể cuộn */
+    #screen-pink-tabs {
+        display: block !important; 
+        overflow-y: auto !important;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch; /* Cuộn mượt trên iOS */
+    }
+
+    /* 2. Căn giữa nội dung khi ngắn, tự động giãn ra khi dài */
+    .pink-main-container {
+        width: 100%;
+        min-height: 100vh;
+        min-height: 100dvh; /* Fix chiều cao chính xác trên điện thoại */
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* 🟢 ĐÂY LÀ CHÌA KHÓA ĐỂ CĂN GIỮA LẠI */
+        padding-top: 20px;
+        padding-bottom: 120px; /* Chừa khoảng trống cho thanh Tab Bar ở dưới */
+        box-sizing: border-box; /* Đảm bảo padding không làm tăng chiều cao */
+    }
+
+    /* 3. Bỏ giới hạn chiều cao của lưới ảnh để nó nối dài tự nhiên */
     .gallery-grid {
         grid-template-columns: repeat(2, 1fr); 
         gap: 15px;
         margin-top: 20px;
-        /* Bỏ giới hạn chiều cao và thanh cuộn riêng để cuộn toàn màn hình */
         max-height: none !important; 
         overflow-y: visible !important;
-        padding: 5px 5px 100px 5px; /* Thêm padding dưới đáy để không bị thanh menu che */
+        padding: 5px;
     }
 
-    /* Cho phép toàn bộ khung nội dung tab có thể cuộn mượt mà */
+    /* 4. Xóa bỏ các thuộc tính gây lỗi đẩy nội dung lên cao ở lần trước */
     .pink-tab-content {
-        height: calc(100vh - 100px);
-        overflow-y: auto;
-        -webkit-overflow-scrolling: touch;
+        height: auto !important;
+        overflow: visible !important;
+        min-height: auto !important;
+        width: 100%;
     }
 }
 /* ==========================================================
@@ -2866,10 +2888,11 @@ h1, h2, .elegant-text { font-family: 'Playfair Display', serif; }
    NÚT CHỈNH SỬA ALBUM — ĐÃ ĐƯA RA <body> ĐỂ THOÁT STACKING CONTEXT
    Mặc định ẩn, chỉ hiện khi có class .visible (khi ở tab Image)
 ========================================================== */
+/* CSS GỐC CHO NÚT (Áp dụng cho cả ĐT và PC) */
 .toggle-edit-gallery-btn {
-    position: fixed;
-    bottom: 100px;        /* Mobile: nằm trên thanh tab bar */
-    right: 20px;
+    position: absolute !important; /* Bám vào thẻ .pink-card */
+    bottom: 20px !important;       /* Cách đáy thẻ 20px */
+    right: 20px !important;        /* Cách phải thẻ 20px */
     width: 48px;
     height: 48px;
     border-radius: 50%;
@@ -2877,11 +2900,11 @@ h1, h2, .elegant-text { font-family: 'Playfair Display', serif; }
     border: 2px solid #ffb3c6;
     color: #ff4d6d;
     font-size: 22px;
-    display: none;        /* Ẩn mặc định */
+    display: none;                 /* Ẩn mặc định */
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    z-index: 99999;       /* Trên mọi thứ, kể cả tab bar */
+    z-index: 10;                   /* Nổi lên trên ảnh nhưng dưới khung xem ảnh (modal) */
     backdrop-filter: blur(5px);
     box-shadow: 0 4px 15px rgba(255, 77, 109, 0.3);
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -2889,24 +2912,17 @@ h1, h2, .elegant-text { font-family: 'Playfair Display', serif; }
     margin: 0;
 }
 
-/* 🟢 CHỈ HIỆN KHI CÓ CLASS .visible */
 .toggle-edit-gallery-btn.visible {
     display: flex;
 }
 
-.toggle-edit-gallery-btn:hover {
-    background: #ff4d6d;
-    color: white;
-    transform: scale(1.15) rotate(10deg);
-    box-shadow: 0 6px 20px rgba(255, 77, 109, 0.5);
-    border-color: #ff4d6d;
-}
-
-/* PC: đặt vị trí khác cho cân đối với thẻ 820px */
+/* Tùy chỉnh nhẹ cho PC (nếu muốn to hơn chút) */
 @media (min-width: 769px) {
     .toggle-edit-gallery-btn {
-        bottom: 40px;
-        right: max(40px, calc((100vw - 820px) / 2 + 20px));
+        bottom: 25px !important;
+        right: 25px !important;
+        width: 50px;
+        height: 50px;
     }
 }
 

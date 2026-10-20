@@ -2885,8 +2885,10 @@ if (!editToggleBtn) {
 }
 
 // 2. LUÔN gắn vào <body> để thoát stacking context của .pink-card
-if (editToggleBtn.parentElement !== document.body) {
-    document.body.appendChild(editToggleBtn);
+// 2. Gắn vào thẻ cha (.pink-card) để nút nằm bên trong khung
+const galleryCard = galleryGrid.closest('.pink-card');
+if (galleryCard && editToggleBtn.parentElement !== galleryCard) {
+    galleryCard.appendChild(editToggleBtn);
 }
 
 // 3. Gán lại onclick cho user hiện tại
