@@ -2185,7 +2185,7 @@ function transitionTo(screenName) {
     }
 }
 
-const INTRO_MUSIC_SRC = "assets/music/cuoi.mp3";
+const INTRO_MUSIC_SRC = "assets/music/cuoi.MP3";
 const introMusic = new Audio(INTRO_MUSIC_SRC);
 introMusic.loop = false;
 introMusic.volume = 0.7;
