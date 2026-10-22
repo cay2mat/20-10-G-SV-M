@@ -3200,3 +3200,45 @@ h1, h2, .elegant-text { font-family: 'Playfair Display', serif; }
     0%, 100% { transform: translateY(0); opacity: 0.7; }
     50% { transform: translateY(-8px); opacity: 1; }
 }
+.start-brand-logo {
+    position: absolute;
+    bottom: 20px; /* 🟢 Trên PC: Hạ xuống gần sát đáy hơn (giảm từ 60px xuống 30px) */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px; 
+    max-width: 70vw;
+    opacity: 0.9; 
+    pointer-events: none; 
+    animation: logoBreathing 3s infinite alternate ease-in-out; 
+    z-index: 10;
+}
+
+@keyframes logoBreathing {
+    0% { opacity: 0.6; transform: translateX(-50%) scale(0.97); filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2)); }
+    100% { opacity: 1; transform: translateX(-50%) scale(1.03); filter: drop-shadow(0 0 15px rgba(255, 105, 180, 0.6)); }
+}
+
+/* Tự động ĐẨY CAO logo trên điện thoại */
+@media (max-width: 768px) {
+    .start-brand-logo {
+        width: 200px; 
+        /* 🟢 Điện thoại: Đẩy lên rất cao (140px) + tự động cộng thêm khoảng trống an toàn của máy */
+        bottom: calc(140px + env(safe-area-inset-bottom)); 
+    }
+}
+/* ================= ĐẨY CỤM NỘI DUNG LÊN CAO TRÊN ĐIỆN THOẠI ================= */
+@media (max-width: 768px) {
+    .start-content {
+        /* 🟢 Số càng âm (ví dụ -80px) thì cụm này càng bay cao lên */
+        /* Bạn có thể thay đổi số -60px thành -40px, -80px... tùy ý nhé */
+        transform: translateY(-90px) !important; 
+    }
+}
+/* Căn giữa icon SVG trong bàn phím */
+.pink-keypad .keypad-btn svg {
+    pointer-events: none; /* Giúp click vào icon vẫn ăn vào nút */
+    transition: transform 0.1s;
+}
+.pink-keypad .keypad-btn:active svg {
+    transform: scale(0.9); /* Hiệu ứng lún nhẹ khi bấm */
+}

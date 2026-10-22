@@ -1207,6 +1207,7 @@ const tapToPlayBtn = document.getElementById('tap-to-play');
    3. GALAXY 3D
 ======================================================== */
 let scene, camera, renderer, galaxyGroup;
+let starParticles;
 let raycaster, mouse;
 let isDraggingGalaxy = false;
 let previousMousePosition = { x: 0, y: 0 };
@@ -1353,7 +1354,8 @@ function createSphericalParticles() {
     }
     starGeo.setAttribute('position', new THREE.BufferAttribute(posArray, 3)); starGeo.setAttribute('color', new THREE.BufferAttribute(colorsArray, 3));
     const starMat = new THREE.PointsMaterial({ size: 2.0, vertexColors: true, transparent: true, opacity: 0.8, map: getStarTexture(), depthWrite: false, blending: THREE.AdditiveBlending });
-    galaxyGroup.add(new THREE.Points(starGeo, starMat)); 
+    starParticles = new THREE.Points(starGeo, starMat);
+    galaxyGroup.add(starParticles); 
 }
 
 function createRoundedImageTexture(imgUrl, name, callback) {
@@ -1502,23 +1504,32 @@ function onDragEnd(event) {
 }
     }
 }
-
 function animateGalaxy() {
     if(currentScreen === 'galaxy') {
         requestAnimationFrame(animateGalaxy);
+        
+        // 1. Chỉ xoay cả group khi người dùng kéo (không dùng cho cinematic)
         if (!isZooming) {
             galaxyGroup.rotation.y += rotVy; galaxyGroup.rotation.x += rotVx;
             galaxyGroup.rotation.x = Math.max(-Math.PI/2.1, Math.min(Math.PI/2.1, galaxyGroup.rotation.x));
             if (!isDraggingGalaxy) { rotVx *= friction; rotVy *= friction; }
         }
 
+        // 2. 🟢 LUÔN xoay đốm sao (kể cả khi đang zoom / cinematic)
+        if (starParticles) {
+            starParticles.rotation.y -= 0.0003;
+            starParticles.material.opacity = 0.6 + Math.sin(performance.now() * 0.0015) * 0.2;
+        }
+
+        // 3. 🟢 LUÔN xoay quả cầu trung tâm và vành đai chữ
         const planet = galaxyGroup.getObjectByName("centralPlanet");
-        if(planet && !isZooming) { 
+        if(planet) { 
             planet.rotation.y += 0.005; planet.rotation.x += 0.002; 
             const ring1 = planet.getObjectByName("orbitRing1"); const ring2 = planet.getObjectByName("orbitRing2");
             if(ring1) ring1.rotation.y += 0.005; if(ring2) ring2.rotation.y -= 0.005;
         }
 
+        // 4. Xử lý quay mặt ảnh về phía camera
         const localCameraPos = camera.position.clone(); galaxyGroup.worldToLocal(localCameraPos);
 
         galaxyGroup.children.forEach(child => {
@@ -1634,42 +1645,42 @@ function setupUnlockScreen() {
     createFloatingHearts();
 }
 
+
 document.querySelectorAll('.keypad-btn').forEach(btn => {
     btn.addEventListener('click', (e) => {
         if (isZooming) return; 
 
-        // GỌI HÀM PHÁT TIẾNG ĐÀN PIANO NGAY KHI BẤM
+        // 🟢 XỬ LÝ NÚT QUAY VỀ TINH CẦU
+        const clickedBtn = e.target.closest('.keypad-btn');
+        if (clickedBtn && clickedBtn.id === 'passcode-back-btn') {
+            if (typeof playArtisticTabSound === 'function') playArtisticTabSound();
+            resetToGalaxyHome(); 
+            return; // Dừng lại
+        }
+
+        // GỌI HÀM PHÁT TIẾNG ĐÀN PIANO
         playRandomPianoNote();
 
-        // 2. --- THÊM HIỆU ỨNG TRÁI TIM BAY TỪ PHÍM ---
+        // HIỆU ỨNG TRÁI TIM BAY TỪ PHÍM
         const heart = document.createElement('div');
-        heart.innerHTML = '❤️'; // Bạn có thể đổi thành 💖, 💕 hoặc ✨ tùy thích
+        heart.innerHTML = '❤️'; 
         heart.className = 'mini-flying-heart';
         
-        // Lấy tọa độ trung tâm của phím vừa bấm để trái tim bay ra từ đúng chỗ đó
         const rect = btn.getBoundingClientRect();
         heart.style.left = (rect.left + rect.width / 2) + 'px';
         heart.style.top = (rect.top + rect.height / 2) + 'px';
         
-        // Gắn trái tim vào màn hình
         document.body.appendChild(heart);
-        
-        // Tự động dọn dẹp (xóa) trái tim sau khi bay xong (1 giây) để không làm nặng máy
-        setTimeout(() => {
-            heart.remove();
-        }, 4000);
+        setTimeout(() => { heart.remove(); }, 4000);
 
         const key = e.target.getAttribute('data-key');
         
-        if (key === 'clear') {
-            enteredPasscode = "";
-        } else if (key === 'ok') {
-            if (enteredPasscode.length === 4) {
-                checkPasscode(enteredPasscode);
-            } else {
-                showPasscodeError();
-            }
-        } else {
+        // 🟢 XỬ LÝ XÓA LÙI (Xóa từng số 1)
+        if (key === 'delete') {
+            enteredPasscode = enteredPasscode.slice(0, -1);
+        } 
+        // XỬ LÝ NHẬP SỐ
+        else if (key) {
             if (enteredPasscode.length < 4) {
                 enteredPasscode += key;
             }
@@ -1678,7 +1689,8 @@ document.querySelectorAll('.keypad-btn').forEach(btn => {
         updateDots(enteredPasscode.length);
         errorMsg.classList.add('hidden');
 
-        if (enteredPasscode.length === 4 && key !== 'ok') {
+        // 🟢 TỰ ĐỘNG MỞ KHÓA KHI ĐỦ 4 SỐ
+        if (enteredPasscode.length === 4) {
             checkPasscode(enteredPasscode);
         }
     });
@@ -1703,11 +1715,8 @@ function showPasscodeError() {
 }
 
 function checkPasscode(passcodeToCheck) {
-    // 🟢 MẬT KHẨU CHỮA CHÁY — Đúng với TẤT CẢ mọi ID
     const BACKUP_PASSCODE = "1508";
 
-    // Ưu tiên: nhập đúng ngày sinh → dùng ngày sinh
-    // Fallback: nếu code sai ngày sinh → dùng 1508 để cứu
     const isBirthdayCorrect = Array.isArray(currentPerson.birthday)
         ? currentPerson.birthday.includes(passcodeToCheck)
         : passcodeToCheck === currentPerson.birthday;
@@ -1717,6 +1726,14 @@ function checkPasscode(passcodeToCheck) {
     if (isCorrect) {
         isZooming = true;
         playSuccessPianoMelody();
+
+        // 🟢 CHỈ CHẠY TRÊN IPHONE: Mở khóa âm thanh ngầm từ lúc nhập đúng mật khẩu
+        const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+        if (isIOS) {
+            bgMusic.src = currentPerson.music;
+            bgMusic.volume = 0; // Tắt tiếng để không phát ra ngoài
+            bgMusic.play().catch(e => console.log("iOS audio unlock:", e));
+        }
 
         setTimeout(() => {
             isZooming = false;
@@ -2134,16 +2151,32 @@ function switchTab(tabId) {
    7. ÂM NHẠC & TIỆN ÍCH
 ======================================================== */
 function initMusic() {
-    bgMusic.src = currentPerson.music; 
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    
+    if (isIOS) {
+        // Nếu trên iPhone: Nhạc đã được play ngầm từ lúc nhập passcode
+        if (!bgMusic.paused) {
+            bgMusic.currentTime = 0; // Tua lại về đầu bài hát
+            bgMusic.volume = 1;      // Bật âm lượng lên
+        } else {
+            // Phòng hờ nếu bị lỗi (fallback)
+            bgMusic.src = currentPerson.music;
+            bgMusic.volume = 1;
+            bgMusic.play().catch(e => tapToPlayBtn.classList.remove('hidden'));
+        }
+    } else {
+        // 💻 TRÊN MÁY TÍNH VÀ ANDROID: Giữ nguyên 100% logic cũ (Tự động phát)
+        bgMusic.src = currentPerson.music; 
+        bgMusic.volume = 1;
+        const playPromise = bgMusic.play();
+        if (playPromise !== undefined) playPromise.catch(error => { 
+            tapToPlayBtn.classList.remove('hidden'); 
+        });
+    }
+
     musicTitleUI.innerText = currentPerson.musicTitle; 
     audioPlayerUI.classList.remove('hidden');
-    const playPromise = bgMusic.play();
-    if (playPromise !== undefined) playPromise.catch(error => { tapToPlayBtn.classList.remove('hidden'); });
 }
-
-tapToPlayBtn.addEventListener('click', () => { bgMusic.play(); tapToPlayBtn.classList.add('hidden'); });
-audioToggleBtn.addEventListener('click', () => { bgMusic.muted = !bgMusic.muted; audioToggleBtn.innerText = bgMusic.muted ? "Unmute" : "Mute"; });
-
 function transitionTo(screenName) {
     Object.values(screens).forEach(screen => { if(screen) screen.classList.remove('active'); });
     if(screens[screenName]) {
@@ -2152,6 +2185,233 @@ function transitionTo(screenName) {
     }
 }
 
+const INTRO_MUSIC_SRC = "assets/music/cuoi.mp3";
+const introMusic = new Audio(INTRO_MUSIC_SRC);
+introMusic.loop = false;
+introMusic.volume = 0.7;
+
+function playCinematicIntro(onComplete) {
+    if (!camera || !galaxyGroup) { 
+        if (onComplete) onComplete(); 
+        return; 
+    }
+    
+    isZooming = true; 
+    rotVx = 0; 
+    rotVy = 0;
+    
+    // Resume / play nhạc (an toàn cho iOS)
+    introMusic.volume = 0.7;
+    try {
+        if (introMusic.readyState >= 1) introMusic.currentTime = 0;
+    } catch (e) {}
+    const _p = introMusic.play();
+    if (_p !== undefined) {
+        _p.catch(() => {
+            introMusic.muted = true;
+            introMusic.play().then(() => {
+                introMusic.muted = false;
+                introMusic.volume = 0.7;
+            }).catch(e => console.warn("[Cinematic] Không phát được nhạc:", e));
+        });
+    }
+    
+    const isMobile = window.innerWidth <= 768;
+    const returnCameraZ = isMobile ? 240 : 160;
+    const lerp = (a, b, t) => a + (b - a) * t;
+
+    // FOV rộng hơn CHỈ cho điện thoại — GIỮ 70
+const originalFov = camera.fov;      // 60 (giá trị gốc)
+let cinematicFov = originalFov;       // biến lưu FOV lúc cinematic
+if (isMobile) {
+    cinematicFov = 70;
+    camera.fov = cinematicFov;
+    camera.updateProjectionMatrix();
+}   
+    const introPhasesMobile = [
+        { 
+            duration: 6900, 
+            startPos: new THREE.Vector3(-140, 120, 320), 
+            endPos: new THREE.Vector3(-140, 120, 320),   
+            startRotY: 0, 
+            endRotY: Math.PI * 1.5,                    
+            startRotX: 0.2,                            
+            endRotX: 0.2 
+        },
+        { 
+             duration: 5400, 
+        startPos: new THREE.Vector3(-80, -15, 130),
+        endPos: new THREE.Vector3(170, 160, 460),
+        startRotY: Math.PI * 1.5, 
+        endRotY: Math.PI * 2.5,                    
+        startRotX: 0.05, 
+        endRotX: 0.38                           
+        },
+        { 
+            duration: 5000,                            
+            startPos: new THREE.Vector3(130, 10, 290),   
+            endPos: new THREE.Vector3(-130, 10, 290),    
+            startRotY: Math.PI * 2.5, 
+            endRotY: Math.PI * 1.5,                    
+            startRotX: 0, 
+            endRotX: 0                                 
+        },
+        { 
+            duration: 4600, 
+            startPos: new THREE.Vector3(-70, -70, 240),
+            endPos: new THREE.Vector3(90, 110, 280),    
+            startRotY: Math.PI * 1.5, 
+            endRotY: Math.PI * 0.5, 
+            startRotX: -0.15,                          
+            endRotX: 0.25                              
+        },
+        { 
+            duration: 3850, 
+            startPos: new THREE.Vector3(90, 110, 280),
+            endPos: new THREE.Vector3(0, 0, returnCameraZ),  
+            startRotY: Math.PI * 0.5, 
+            endRotY: Math.PI * 2,
+            startRotX: 0.25, 
+            endRotX: 0
+        }
+    ];
+
+    // ============================================================
+    // BỘ THÔNG SỐ PC — 100% GIỐNG CODE GỐC, KHÔNG ĐỔI GÌ
+    // ============================================================
+    const introPhasesDesktop = [
+        { 
+            duration: 6900, 
+            startPos: new THREE.Vector3(-90, 80, 190), 
+            endPos: new THREE.Vector3(-90, 80, 190),   
+            startRotY: 0, 
+            endRotY: Math.PI * 1.5,                    
+            startRotX: 0.2,                            
+            endRotX: 0.2 
+        },
+        { 
+            duration: 5400, 
+            startPos: new THREE.Vector3(-70, -10, 110),
+            endPos: new THREE.Vector3(100, 100, 270),  
+            startRotY: Math.PI * 1.5, 
+            endRotY: Math.PI * 2.5,                    
+            startRotX: 0.05, 
+            endRotX: 0.38                              
+        },
+        { 
+            duration: 5000,                            
+            startPos: new THREE.Vector3(80, 5, 175),   
+            endPos: new THREE.Vector3(-80, 5, 175),    
+            startRotY: Math.PI * 2.5, 
+            endRotY: Math.PI * 1.5,                    
+            startRotX: 0, 
+            endRotX: 0                                 
+        },
+        { 
+            duration: 4600, 
+            startPos: new THREE.Vector3(-40, -40, 140),
+            endPos: new THREE.Vector3(60, 70, 180),    
+            startRotY: Math.PI * 1.5, 
+            endRotY: Math.PI * 0.5, 
+            startRotX: -0.15,                          
+            endRotX: 0.25                              
+        },
+        { 
+            duration: 3850, 
+            startPos: new THREE.Vector3(60, 70, 180),
+            endPos: new THREE.Vector3(0, 0, returnCameraZ),  
+            startRotY: Math.PI * 0.5, 
+            endRotY: Math.PI * 2,   
+            startRotX: 0.25, 
+            endRotX: 0
+        }
+    ];
+
+    const introPhases = isMobile ? introPhasesMobile : introPhasesDesktop;
+
+    let currentPhase = 0;
+    let phaseStartTime = Date.now();
+
+    function animateCinematicSequence() {
+        const now = Date.now();
+        const phase = introPhases[currentPhase];
+        let progress = (now - phaseStartTime) / phase.duration;
+        if (progress > 1) progress = 1;
+
+        let ease = progress < 0.5 
+            ? 4 * progress * progress * progress 
+            : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+
+        if (currentPhase === 4) {
+            ease = -(Math.cos(Math.PI * progress) - 1) / 2;
+        }
+
+        camera.position.lerpVectors(phase.startPos, phase.endPos, ease);
+        camera.lookAt(0, 0, 0);
+
+        galaxyGroup.rotation.y = lerp(phase.startRotY, phase.endRotY, ease);
+galaxyGroup.rotation.x = lerp(phase.startRotX, phase.endRotX, ease);
+
+// 🟢 Trong phase cuối (index 4), FOV chuyển MƯỢT từ 70 → 60
+//    để không bị "giật zoom vào" khi reset về góc chọn sao
+if (isMobile && currentPhase === 4) {
+    camera.fov = lerp(cinematicFov, originalFov, ease);
+    camera.updateProjectionMatrix();
+}
+
+renderer.render(scene, camera);
+        if (progress < 1) {
+            requestAnimationFrame(animateCinematicSequence);
+        } else {
+            currentPhase++;
+            if (currentPhase < introPhases.length) {
+                phaseStartTime = Date.now();
+                requestAnimationFrame(animateCinematicSequence);
+            } else {
+                fadeOutIntroMusic();
+
+                camera.position.set(0, 0, returnCameraZ);
+                camera.lookAt(0, 0, 0);
+                galaxyGroup.rotation.set(0, 0, 0);
+                
+                // Trả FOV về ban đầu (PC = 60, mobile = 60)
+                camera.fov = originalFov;
+                camera.updateProjectionMatrix();
+                
+                isZooming = false;
+                rotVx = 0;
+                rotVy = 0;
+                
+                if (onComplete) onComplete();
+            }
+        }
+    }
+
+    animateCinematicSequence();
+}
+
+/* Hàm fade out nhạc cinematic mượt mà (1.5 giây) */
+function fadeOutIntroMusic() {
+    const fadeDuration = 1500;
+    const fadeSteps = 30;
+    const volumeStep = introMusic.volume / fadeSteps;
+    let currentStep = 0;
+    
+    const fadeInterval = setInterval(() => {
+        currentStep++;
+        if (introMusic.volume > volumeStep) {
+            introMusic.volume -= volumeStep;
+        } else {
+            introMusic.volume = 0;
+        }
+        
+        if (currentStep >= fadeSteps) {
+            clearInterval(fadeInterval);
+            introMusic.pause();
+            introMusic.currentTime = 0;
+        }
+    }, fadeDuration / fadeSteps);
+}
 window.addEventListener('DOMContentLoaded', () => {
     initThreeJSGalaxy();
 });
@@ -2633,7 +2893,7 @@ function playRandomPianoNote() {
 
         // Chỉnh âm lượng: Kêu lên ngay lập tức rồi tắt dần trong 1 giây (như khi gõ phím đàn)
         gain.gain.setValueAtTime(0, now);
-        gain.gain.linearRampToValueAtTime(0.3, now + 0.02); // Âm lượng 30% đủ nghe không bị chói
+        gain.gain.linearRampToValueAtTime(0.3, now + 0.02); // Âm lượng 30% đủ nghe không   bị chói
         gain.gain.exponentialRampToValueAtTime(0.001, now + 1.0); // Ngân vang rồi tắt dần
 
         osc.connect(gain);
@@ -2920,8 +3180,8 @@ editToggleBtn.onclick = () => {
         }
         
         let imagesToLoad = getGalleryImages();
-        
-        if (currentPerson.id === 1 && !isGalleryEditing) {
+            //if (currentPerson.id === 1 && !isGalleryEditing) {//
+            if (!isGalleryEditing) {
             grid.classList.add('conveyor-belt');
             
             const trackTop = document.createElement('div');
@@ -3375,28 +3635,104 @@ document.addEventListener('DOMContentLoaded', () => {
     if (startScreen) {
         // Khi người dùng chạm/click vào bất kỳ đâu trên màn hình chờ
         startScreen.addEventListener('click', function() {
-            // 1. Yêu cầu trình duyệt bật toàn màn hình
-            const docEl = document.documentElement;
-            if (docEl.requestFullscreen) {
-                docEl.requestFullscreen().catch(err => console.log("Lỗi Fullscreen:", err));
-            } else if (docEl.webkitRequestFullscreen) { /* Cho Safari cũ */
-                docEl.webkitRequestFullscreen();
-            } else if (docEl.msRequestFullscreen) { /* Cho IE11 */
-                docEl.msRequestFullscreen();
-            }
+    // ============================================================
+    // A. UNLOCK AUDIO NGAY (gesture gốc) — play MUTED để iOS cho phép
+    // ============================================================
+    introMusic.muted = true;
+    introMusic.volume = 1; // Volume thật, sẽ dùng sau khi unmute
+    try {
+        if (introMusic.readyState >= 1) introMusic.currentTime = 0;
+    } catch (e) { /* bỏ qua */ }
 
-            // 2. Đánh thức AudioContext để nhạc có thể phát ngay sau đó
-            if (typeof getAudioContext === 'function') {
-                getAudioContext(); 
-            }
-
-            // 3. Làm mờ và ẩn màn hình chờ đi (hiệu ứng fade out)
-            startScreen.classList.add('fade-out');
-            
-            // Xóa hẳn khỏi DOM sau khi mờ xong để không cản trở click
-            setTimeout(() => {
-                startScreen.style.display = 'none';
-            }, 800); 
+    const _p = introMusic.play();
+    if (_p !== undefined) {
+        _p.catch(e => {
+            console.warn("[Cinematic] play muted thất bại, thử unmuted:", e);
+            introMusic.muted = false;
+            introMusic.play().catch(e2 => 
+                console.error("[Cinematic] Không phát được nhạc:", e2)
+            );
         });
     }
+
+    // AudioContext (cho các sound effect khác)
+    if (typeof getAudioContext === 'function') {
+        try { getAudioContext(); } catch (e) {}
+    }
+
+    // ============================================================
+    // B. REQUEST FULLSCREEN
+    // ============================================================
+    const docEl = document.documentElement;
+    let fsPromise = null;
+    try {
+        if (docEl.requestFullscreen) {
+            fsPromise = docEl.requestFullscreen();
+        } else if (docEl.webkitRequestFullscreen) {
+            fsPromise = Promise.resolve(docEl.webkitRequestFullscreen());
+        } else if (docEl.msRequestFullscreen) {
+            fsPromise = Promise.resolve(docEl.msRequestFullscreen());
+        }
+    } catch (e) {
+        fsPromise = null;
+    }
+
+    // ============================================================
+    // C. HÀM KHỞI ĐỘNG CINEMATIC (chỉ chạy 1 lần)
+    // ============================================================
+    let started = false;
+    function startCinematicNow() {
+        if (started) return;
+        started = true;
+
+        // Reset nhạc về 0 + UNMUTE — nhạc bắt đầu khớp chính xác với phase 1
+        try { introMusic.currentTime = 0; } catch (e) {}
+        introMusic.muted = false;
+        introMusic.volume = 0.7;
+
+        // Delay ~120ms để browser settle layout sau fullscreen (tránh giật)
+        setTimeout(() => {
+            playCinematicIntro(() => {
+                console.log("Cinematic intro hoàn tất, sẵn sàng tương tác.");
+            });
+        }, 120);
+    }
+
+    // Fallback: nếu fullscreen không tồn tại (iPhone Safari) hoặc fail
+    // → chạy sau 350ms
+    const fallbackTimer = setTimeout(startCinematicNow, 350);
+
+    // ============================================================
+    // D. ĐỢI FULLSCREEN XONG RỒI MỚI CHẠY CINEMATIC
+    // ============================================================
+    if (fsPromise && typeof fsPromise.then === 'function') {
+        fsPromise.then(() => {
+            // Fullscreen đã vào — chờ event để chắc chắn layout đã ổn định
+            const onFSChange = () => {
+                document.removeEventListener('fullscreenchange', onFSChange);
+                document.removeEventListener('webkitfullscreenchange', onFSChange);
+                clearTimeout(fallbackTimer);
+                startCinematicNow();
+            };
+            document.addEventListener('fullscreenchange', onFSChange, { once: true });
+            document.addEventListener('webkitfullscreenchange', onFSChange, { once: true });
+
+            // Safety net: nếu event không fire (một số browser hiếm gặp)
+            setTimeout(() => {
+                clearTimeout(fallbackTimer);
+                startCinematicNow();
+            }, 600);
+        }).catch(err => {
+            // Fullscreen bị từ chối → vẫn chạy cinematic bình thường
+            console.warn("[Cinematic] Fullscreen bị từ chối:", err);
+            clearTimeout(fallbackTimer);
+            startCinematicNow();
+        });
+    }
+    startScreen.classList.add('fade-out');
+    setTimeout(() => {
+        startScreen.style.display = 'none';
+    }, 800);
+});
+    }   
 });

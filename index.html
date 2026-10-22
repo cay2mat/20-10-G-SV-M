@@ -28,16 +28,13 @@
     </section>
     <section id="screen-unlock" class="screen">
         <div id="hearts-container" class="hearts-container"></div>
-
         <div class="unlock-container">
             <div class="unlock-avatar-wrapper">
                 <img id="unlock-avatar" src="" alt="Star">
             </div>
-            
             <h2 id="unlock-name" class="elegant-text pink-name">Name</h2>
             <h1 class="cursive-text">Nhập mật mã để mở nào!</h1>
             <p class="passcode-hint">(Hint: Ngày công chúa xuất hiện trên đời❤️)</p>
-            
             <div class="passcode-display-box" id="passcode-box">
                 <div class="passcode-dots" id="passcode-dots">
                     <div class="dot"></div>
@@ -46,9 +43,7 @@
                     <div class="dot"></div>
                 </div>
             </div>
-
             <p id="unlock-error" class="error-text hidden">❤️Oiii nàng quên mất ngày định mệnh đó rồi sao!</p>
-
             <div class="pink-keypad">
                 <button class="keypad-btn" data-key="1">1</button>
                 <button class="keypad-btn" data-key="2">2</button>
@@ -59,93 +54,77 @@
                 <button class="keypad-btn" data-key="7">7</button>
                 <button class="keypad-btn" data-key="8">8</button>
                 <button class="keypad-btn" data-key="9">9</button>
-                <button class="keypad-btn action-btn" data-key="clear">C</button>
+                <button class="keypad-btn action-btn" data-key="delete" title="Xóa">
+                    <svg viewBox="0 0 24 24" style="width: 24px; height: 24px; fill: currentColor;">
+                      <path d="M22 3H7c-.69 0-1.23.35-1.59.88L0 12l5.41 8.11c.36.53.9.89 1.59.89h15c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H7.07L2.4 12l4.66-7H22v14zm-11.59-2L14 13.41 17.59 17 19 15.59 15.41 12 19 8.41 17.59 7 14 10.59 10.41 7 9 8.41 12.59 12 9 15.59z"/>
+                     </svg>
+                </button>
                 <button class="keypad-btn highlight-btn" data-key="0">0</button>
-                <button class="keypad-btn action-btn" data-key="ok">OK</button>
+
+                <!-- Nút Trở về (Mũi tên uốn cong mềm mại) -->
+<button class="keypad-btn action-btn" id="passcode-back-btn" title="Về trang chủ">
+    <svg viewBox="0 0 24 24" style="width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;">
+        <path d="M9 14 4 9l5-5"></path>
+        <path d="M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5v0a5.5 5.5 0 0 1-5.5 5.5H11"></path>
+    </svg>
+</button>
             </div>
         </div>
     </section>
-
     <section id="screen-flower" class="screen">
-        <!-- Khung tiêu đề chừa sẵn vị trí cố định từ đầu -->
         <div id="flower-top-title" class="flower-top-title reserve-space">
-            <!-- Thêm <br> để ngắt dòng chủ động -->
             <h1 id="flower-greeting">Nhân ngày 20/10 tặng Công Chúa 1 bông hoa</h1>
             <p id="flower-name" class="flower-recipient-name">Name</p>
         </div>
         <div class="flower-container">
             <svg id="flower-svg" viewBox="0 0 400 600" preserveAspectRatio="xMidYMax meet">
                 <defs>
-                    <!-- Gradient Thân Cây -->
                     <linearGradient id="stemGrad" x1="0%" y1="0%" x2="100%" y2="100%">
                         <stop offset="0%" stop-color="#4caf50" />
                         <stop offset="100%" stop-color="#1b5e20" />
                     </linearGradient>
-                    <!-- Gradient Lá -->
                     <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
                         <stop offset="0%" stop-color="#81c784" />
                         <stop offset="100%" stop-color="#2e7d32" />
                     </linearGradient>
-                    <!-- Gradient Cánh Hoa Ngoài (Đỏ Nhung Thẫm) -->
                     <radialGradient id="petalOuterGrad" cx="50%" cy="50%" r="50%">
                         <stop offset="0%" stop-color="#e63946" />
                         <stop offset="70%" stop-color="#900c3f" />
                         <stop offset="100%" stop-color="#4a001f" />
                     </radialGradient>
-                    <!-- Gradient Cánh Hoa Trong (Đỏ Rạng Rỡ) -->
                     <radialGradient id="petalInnerGrad" cx="50%" cy="50%" r="50%">
                         <stop offset="0%" stop-color="#ff4d6d" />
                         <stop offset="75%" stop-color="#c77dff" />
                         <stop offset="100%" stop-color="#800020" />
                     </radialGradient>
-                    <!-- Gradient Nhụy Hoa -->
                     <radialGradient id="coreGrad" cx="50%" cy="50%" r="50%">
                         <stop offset="0%" stop-color="#ffb703" />
                         <stop offset="60%" stop-color="#ff4d6d" />
                         <stop offset="100%" stop-color="#590d22" />
                     </radialGradient>
-                    <!-- Hiệu ứng bóng đổ 3D -->
-                    <!-- Hiệu ứng phát quang (Glow) Neon -->
                     <filter id="roseShadow" x="-30%" y="-30%" width="160%" height="160%">
-                        <!-- Lớp sáng nhòe tỏa rộng ra xung quanh -->
                         <feDropShadow dx="0" dy="0" stdDeviation="15" flood-color="#ff4d6d" flood-opacity="0.8"/>
-                        <!-- Lớp sáng chói gắt ở sát viền cánh hoa -->
                         <feDropShadow dx="0" dy="0" stdDeviation="5" flood-color="#ffb3c6" flood-opacity="1"/>
                     </filter>
                 </defs>
-
-                <!-- Thân cây & Lá -->
                 <path class="stem" d="M200,580 Q195,450 200,320 Q205,220 200,160" />
                 <path class="leaf leaf-left" d="M200,420 Q130,380 100,430 Q150,460 200,420" />
                 <path class="leaf leaf-right" d="M200,320 Q270,280 300,330 Q250,360 200,320" />
-                
-                <!-- Bông hoa hồng nở tầng lớp -->
                 <g id="bloomed-rose" class="rose-group">
-                    <!-- Tầng cánh ngoài cùng -->
                     <path class="rose-petal petal-outer-1" d="M200,160 Q110,50 200,0 Q290,50 200,160" />
                     <path class="rose-petal petal-outer-2" d="M200,160 Q70,110 40,170 Q120,230 200,160" />
                     <path class="rose-petal petal-outer-3" d="M200,160 Q330,110 360,170 Q280,230 200,160" />
                     <path class="rose-petal petal-outer-4" d="M200,160 Q100,250 145,320 Q200,250 200,160" />
                     <path class="rose-petal petal-outer-5" d="M200,160 Q300,250 255,320 Q200,250 200,160" />
-
-                    <!-- Tầng cánh giữa -->
-                    <!-- Tầng cánh giữa (5 cánh giọt nước mập mạp, đều nhau 100%) -->
-                    <!-- Cánh trên cùng (12h) -->
                     <path class="rose-petal petal-mid-1" d="M200,160 Q130,70 200,30 Q270,70 200,160" />
-                    
-                    <!-- 2 Cánh chéo trên (10h và 2h) - Đã sửa cong bầu bĩnh y hệt cánh cũ -->
                     <path class="rose-petal petal-mid-4" d="M200,160 Q100,120 70,60 Q160,30 200,160" />
                     <path class="rose-petal petal-mid-5" d="M200,160 Q300,120 330,60 Q240,30 200,160" />
-                    
-                    <!-- 2 Cánh chéo dưới (8h và 4h) -->
                     <path class="rose-petal petal-mid-2" d="M200,160 Q90,130 75,180 Q145,215 200,160" />
                     <path class="rose-petal petal-mid-3" d="M200,160 Q310,130 325,180 Q255,215 200,160" />
-                    <!-- Nhụy & Nụ hồng trung tâm -->
                     <circle class="rose-core" cx="200" cy="160" r="20" />
                     <path class="rose-inner-bud" d="M200,160 Q165,110 200,90 Q235,110 200,160" />
                 </g>
             </svg>
-            <!-- BÓ HOA TULIP TRẮNG 9 BÔNG & 12 LÁ - CHẬU MỌC TRƯỚC, HOA NỞ CHUẨN NHỊP 7S -->
 <div id="tulip-css-container" class="tulip-animated-wrapper" style="display: none;">
     <div class="tulip-sparkles">
         <span class="sparkle sp-1">✨</span>
@@ -154,7 +133,6 @@
         <span class="sparkle sp-4">✦</span>
         <span class="sparkle sp-5">✨</span>
     </div>
-
     <svg id="tulip-svg" viewBox="0 0 500 650" preserveAspectRatio="xMidYMax meet">
         <defs>
             <linearGradient id="tulipStemGrad" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -162,28 +140,23 @@
                 <stop offset="50%" stop-color="#388e3c" />
                 <stop offset="100%" stop-color="#1b5e20" />
             </linearGradient>
-
             <linearGradient id="tulipLeafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
                 <stop offset="0%" stop-color="#a5d6a7" />
                 <stop offset="60%" stop-color="#2e7d32" />
                 <stop offset="100%" stop-color="#1b5e20" />
             </linearGradient>
-
-            <!-- Gradient Tulip Trắng Ngọc Trai 3D -->
             <radialGradient id="whitePetalOuter" cx="50%" cy="80%" r="80%">
                 <stop offset="0%" stop-color="#ffffff" />
                 <stop offset="50%" stop-color="#f8fafc" />
                 <stop offset="85%" stop-color="#e2e8f0" />
                 <stop offset="100%" stop-color="#cbd5e1" />
             </radialGradient>
-
             <radialGradient id="whitePetalInner" cx="50%" cy="30%" r="70%">
                 <stop offset="0%" stop-color="#ffffff" />
                 <stop offset="35%" stop-color="#fef08a" />
                 <stop offset="80%" stop-color="#e2e8f0" />
                 <stop offset="100%" stop-color="#94a3b8" />
             </radialGradient>
-
             <linearGradient id="paperGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
                 <stop offset="0%" stop-color="#f5ebe0" />
                 <stop offset="100%" stop-color="#d5bdaf" />
@@ -192,14 +165,11 @@
                 <stop offset="0%" stop-color="#e3d5ca" />
                 <stop offset="100%" stop-color="#d5bdaf" />
             </linearGradient>
-
             <filter id="tulipWhiteGlow" x="-20%" y="-20%" width="140%" height="140%">
                 <feDropShadow dx="0" dy="0" stdDeviation="10" flood-color="#ffffff" flood-opacity="0.8"/>
                 <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#cbd5e1" flood-opacity="0.5"/>
             </filter>
         </defs>
-
-        <!-- LỚP 1: 12 LÁ CÂY SUM SÊ ĐAN XEN -->
         <g class="tulip-leaves-group">
             <path class="t-leaf leaf-1" d="M250,520 C160,450 100,330 80,240 C130,300 210,390 250,520" />
             <path class="t-leaf leaf-2" d="M250,520 C340,450 400,330 420,240 C370,300 290,390 250,520" />
@@ -214,8 +184,6 @@
             <path class="t-leaf leaf-11" d="M250,550 C230,490 205,440 195,370 C220,430 240,480 250,550" />
             <path class="t-leaf leaf-12" d="M250,550 C270,490 295,440 305,370 C280,430 260,480 250,550" />
         </g>
-
-        <!-- LỚP 2: 9 THÂN CÂY NỐI TỪ TRONG CHẬU -->
         <g class="tulip-stems-group">
             <path class="t-stem stem-m" d="M250,550 C248,420 252,260 250,140" />
             <path class="t-stem stem-l1" d="M250,550 C235,430 195,290 180,180" />
@@ -227,70 +195,55 @@
             <path class="t-stem stem-fl" d="M250,550 C238,440 218,340 210,240" />
             <path class="t-stem stem-fr" d="M250,550 C262,440 282,340 290,240" />
         </g>
-
-        <!-- LỚP 3: 9 BÔNG HOA TULIP TRẮNG PHÂN TẦNG -->
         <g class="tulip-flowers-group" filter="url(#tulipWhiteGlow)">
-            <!-- Bông cao nhất chính giữa -->
             <g class="t-flower flower-center">
                 <path class="t-petal p-back" d="M250,140 C228,112 232,70 250,50 C268,70 272,112 250,140" />
                 <path class="t-petal p-left" d="M245,140 C208,118 208,76 241,62 C245,95 245,122 245,140" />
                 <path class="t-petal p-right" d="M255,140 C292,118 292,76 259,62 C255,95 255,122 255,140" />
                 <path class="t-petal p-front" d="M250,144 C222,122 224,72 250,57 C276,72 278,122 250,144" />
             </g>
-
-            <!-- Tầng hoa vừa -->
             <g class="t-flower flower-left-1">
                 <path class="t-petal p-back" d="M180,180 C158,152 162,110 180,90 C198,110 202,152 180,180" />
                 <path class="t-petal p-left" d="M175,180 C138,158 138,116 171,102 C175,135 175,162 175,180" />
                 <path class="t-petal p-right" d="M185,180 C222,158 222,116 189,102 C185,135 185,162 185,180" />
                 <path class="t-petal p-front" d="M180,184 C152,162 154,112 180,97 C206,112 208,162 180,184" />
             </g>
-
             <g class="t-flower flower-right-1">
                 <path class="t-petal p-back" d="M320,180 C298,152 302,110 320,90 C338,110 342,152 320,180" />
                 <path class="t-petal p-left" d="M315,180 C278,158 278,116 311,102 C315,135 315,162 315,180" />
                 <path class="t-petal p-right" d="M325,180 C362,158 362,116 329,102 C325,135 325,162 325,180" />
                 <path class="t-petal p-front" d="M320,184 C292,162 294,112 320,97 C346,112 348,162 320,184" />
             </g>
-
-            <!-- Tầng hoa trung -->
             <g class="t-flower flower-left-2">
                 <path class="t-petal p-back" d="M120,230 C100,205 104,168 120,150 C136,168 140,205 120,230" />
                 <path class="t-petal p-left" d="M116,230 C82,210 82,172 109,158 C112,188 112,214 116,230" />
                 <path class="t-petal p-right" d="M124,230 C158,210 158,172 131,158 C128,188 128,214 124,230" />
                 <path class="t-petal p-front" d="M120,233 C95,215 97,168 120,155 C143,168 145,215 120,233" />
             </g>
-
             <g class="t-flower flower-right-2">
                 <path class="t-petal p-back" d="M380,230 C360,205 364,168 380,150 C396,168 400,205 380,230" />
                 <path class="t-petal p-left" d="M376,230 C342,210 342,172 369,158 C372,188 372,214 376,230" />
                 <path class="t-petal p-right" d="M384,230 C418,210 418,172 391,158 C388,188 388,214 384,230" />
                 <path class="t-petal p-front" d="M380,233 C355,215 357,168 380,155 C403,168 405,215 380,233" />
             </g>
-
-            <!-- Tầng hoa xòe xa 2 bên -->
             <g class="t-flower flower-left-3">
                 <path class="t-petal p-back" d="M70,290 C52,268 55,235 70,220 C85,235 88,268 70,290" />
                 <path class="t-petal p-left" d="M67,290 C37,272 37,238 61,225 C64,252 64,276 67,290" />
                 <path class="t-petal p-right" d="M73,290 C103,272 103,238 79,225 C76,252 76,276 73,290" />
                 <path class="t-petal p-front" d="M70,293 C48,277 50,235 70,223 C90,235 92,277 70,293" />
             </g>
-
             <g class="t-flower flower-right-3">
                 <path class="t-petal p-back" d="M430,290 C412,268 415,235 430,220 C445,235 448,268 430,290" />
                 <path class="t-petal p-left" d="M427,290 C397,272 397,238 421,225 C424,252 424,276 427,290" />
                 <path class="t-petal p-right" d="M433,290 C463,272 463,238 439,225 C436,252 436,276 433,290" />
                 <path class="t-petal p-front" d="M430,293 C408,277 410,235 430,223 C450,235 452,277 430,293" />
             </g>
-
-            <!-- Tầng hoa mặt trước (điểm xuyết phía dưới) -->
             <g class="t-flower flower-front-left">
                 <path class="t-petal p-back" d="M210,240 C192,217 195,182 210,166 C225,182 228,217 210,240" />
                 <path class="t-petal p-left" d="M206,240 C174,222 174,186 199,172 C202,200 202,225 206,240" />
                 <path class="t-petal p-right" d="M214,240 C246,222 246,186 221,172 C218,200 218,225 214,240" />
                 <path class="t-petal p-front" d="M210,243 C187,226 189,182 210,170 C231,182 233,226 210,243" />
             </g>
-
             <g class="t-flower flower-front-right">
                 <path class="t-petal p-back" d="M290,240 C272,217 275,182 290,166 C305,182 308,217 290,240" />
                 <path class="t-petal p-left" d="M286,240 C254,222 254,186 279,172 C282,200 282,225 286,240" />
@@ -299,7 +252,6 @@
             </g>
         </g>
 
-        <!-- LỚP 4: GIẤY GÓI (CHẬU) HIỆN NỔI ĐẦU TIÊN -->
         <g class="ramo">
             <path d="M120,380 L380,380 L310,600 L190,600 Z" fill="url(#paperGrad2)" />
             <path d="M120,380 L250,460 L180,600 L100,430 Z" fill="url(#paperGrad1)" />
@@ -317,12 +269,9 @@
 </div>
             <div id="flower-glow" class="rose-glow"></div>
         </div>
-
-       <!-- Khung hướng dẫn chỉ vào hoa với mũi tên uốn lượn -->
         <div id="flower-click-instruction" class="flower-click-instruction reserve-space">
             <div class="arrow-container">
                 <span class="hint-text">Hãy nhận hoa ❤️</span>
-                <!-- Mũi tên chỉ sang trái, đổi màu nét vẽ thành hồng neon (#ff9ebb) -->
                 <svg width="70" height="50" viewBox="0 0 70 50" class="curved-arrow">
                     <path d="M60,10 Q50,45 10,35" fill="none" stroke="#ff9ebb" stroke-width="3" stroke-linecap="round"/>
                     <path d="M25,20 L10,35 L20,48" fill="none" stroke="#ff9ebb" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
@@ -330,7 +279,6 @@
             </div>
         </div>
     </section>
-
     <section id="screen-pink-tabs" class="screen pink-theme-screen">
         <div class="pink-hearts-bg"></div>
         <div id="floating-bg-container" class="floating-bg-elements" style="display: none;">
@@ -364,7 +312,6 @@
         <span class="tab-label">Gift</span>
     </button>
 </nav>
-
             <div class="pink-tab-content">
                 <div id="tab-me" class="tab-pane active">
                     <div class="pink-card glass-panel">
@@ -375,18 +322,12 @@
                         <h4 id="me-tab-nickname" class="pink-sub-text">Nickname</h4>
                         <div class="pink-divider"></div>
                         <p class="pink-quote">"Một bông hoa nhỏ xinh đẹp dành riêng cho ngày 20/10 của bạn ❤️"</p>
-        <!-- Bọc cụm điều khiển nhạc lại để nằm ngang hàng -->
-<!-- Bọc cụm điều khiển nhạc lại để nằm ngang hàng -->
 <div class="music-controls-container">
-
-    <!-- 🏠 NÚT QUAY VỀ TINH CẦU (Chuyển sang bên trái) -->
     <button id="back-to-galaxy-btn" class="gallery-style-btn back-home-btn" title="Về màn hình tinh cầu">
         <svg viewBox="0 0 24 24" style="width: 18px; height: 18px; fill: currentColor;">
             <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
         </svg>
     </button>
-
-    <!-- KHUNG CHỌN NHẠC (Ở giữa) -->
     <button id="open-music-popup-btn" class="music-trigger-btn">
         <div class="music-trigger-left">
             <span class="music-icon">🎵</span>
@@ -394,8 +335,6 @@
         </div>
         <span class="dropdown-arrow">▼</span>
     </button>
-    
-    <!-- KHUNG ĐIỀU KHIỂN ÂM LƯỢNG (Bên phải) -->
     <div class="volume-wrapper">
         <button id="vol-toggle-btn" class="gallery-style-btn" title="Bật/Tắt âm thanh">
             <svg id="svg-vol-on" viewBox="0 0 640 512" style="width: 18px; height: 18px; fill: currentColor;">
@@ -409,11 +348,9 @@
             <input type="range" id="vol-slider" min="0" max="1" step="0.01" value="1">
         </div>
     </div>
-
 </div>
                     </div>
                 </div>
-
                 <div id="tab-sec2" class="tab-pane">
                     <div class="letter-wrapper">
                         <div class="envelope-container" id="envelope-container">
@@ -474,9 +411,7 @@
                                     </div>
                                     <span class="decor-flower-large">🌺</span>
                                 </div>
-
                             </div>
-
                             <div class="envelope-front"></div>
                             <div class="envelope-flap" id="envelope-flap"></div>
                             <div class="envelope-seal" id="envelope-seal">❤️</div>
@@ -522,7 +457,6 @@
             </div>
             <h2 class="pink-title-text">Khoảnh Khắc Xinh Đẹp</h2>
             <p class="pink-quote">Những khoảnh khắc đáng nhớ ❤️</p>
-            
             <div class="gallery-grid" id="gallery-grid">
             </div>
         </div>
@@ -530,7 +464,6 @@
     </section>
 <div id="video-modal" class="pink-modal-overlay hidden">
     <div class="pink-video-frame">
-
             <div class="pink-video-header">
                 <span class="pink-video-title"> Special Gift Video</span>
                 <button id="close-video" class="pink-close-btn" title="Đóng">✕</button>
@@ -552,17 +485,14 @@
                     <button id="btn-rewind-5" class="control-btn" title="Lùi 5s">
                         <span>⏮ -5s</span>
                     </button>
-
                     <button id="btn-play-pause" class="control-btn play-btn" title="Phát / Tạm dừng">
                         <span id="play-icon">▶</span>
                     </button>
-
                     <button id="btn-forward-5" class="control-btn" title="Tua 5s">
                         <span>+5s ⏭</span>
                     </button>
                 </div>
             </div>
-
     </div> 
 </div>  
 <div id="image-viewer-modal" class="hidden-modal">
@@ -579,7 +509,6 @@
             </div>
         </div>
     </div>
-        <!-- MÀN HÌNH CHỜ (BẤM ĐỂ BẮT ĐẦU) -->
     <div id="start-screen">
         <div class="start-content">
             <div class="sparkle-ring"></div>
@@ -588,6 +517,7 @@
             <div class="start-heart">❤️</div>
             <p class="start-hint">Chạm để mở món quà</p>
         </div>
+        <img src="assets/images/logo.png" alt="Brand Logo" class="start-brand-logo">
     </div>
     <script src="script.js"></script>
 </body>
