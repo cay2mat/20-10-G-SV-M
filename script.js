@@ -1,6 +1,3 @@
-/* ========================================================
-   1. DATABASE
-======================================================== */
 const people = [
     { 
         id: 1, 
@@ -19,7 +16,8 @@ const people = [
             "assets/images/Gallerys/3.jpg",
             "assets/images/Gallerys/4.jpg",
             "assets/images/Gallerys/7.jpg",
-            "assets/images/Gallerys/8.jpg"
+            "assets/images/Gallerys/8.jpg",
+            "assets/images/Gallerys/9.jpg"
         ],
         letter: `Gửi Bạn Tui... 😘
 
@@ -60,7 +58,8 @@ Giấu Tên❤️🫶 `,
             "assets/images/Gallerys/5.jpg",
             "assets/images/Gallerys/6.jpg",
             "assets/images/Gallerys/7.jpg",
-            "assets/images/Gallerys/8.jpg"
+            "assets/images/Gallerys/8.jpg",
+            "assets/images/Gallerys/9.jpg"
         ], 
         letter: `Gửi Mi... 🌷
 
@@ -92,7 +91,8 @@ Thân mến,
             "assets/images/Gallerys/5.jpg",
             "assets/images/Gallerys/6.jpg",
             "assets/images/Gallerys/7.jpg",
-            "assets/images/Gallerys/8.jpg"
+            "assets/images/Gallerys/8.jpg",
+            "assets/images/Gallerys/9.jpg"
         ],
         letter: `Gửi Anh... 🌷
 
@@ -124,7 +124,8 @@ Châm Son 🤍`,
             "assets/images/Gallerys/5.jpg",
             "assets/images/Gallerys/6.jpg",
             "assets/images/Gallerys/7.jpg",
-            "assets/images/Gallerys/8.jpg"
+            "assets/images/Gallerys/8.jpg",
+            "assets/images/Gallerys/9.jpg"
         ],
         letter: `Gửi San... 🌷
 
@@ -156,7 +157,8 @@ Khin 🤍`,
             "assets/images/Gallerys/5.jpg",
             "assets/images/Gallerys/6.jpg",
             "assets/images/Gallerys/7.jpg",
-            "assets/images/Gallerys/8.jpg"
+            "assets/images/Gallerys/8.jpg",
+            "assets/images/Gallerys/9.jpg"
         ],
         letter: `Gửi Vy... 🌷
 
@@ -188,7 +190,8 @@ Chí Hoàng 🤍`,
             "assets/images/Gallerys/5.jpg",
             "assets/images/Gallerys/6.jpg",
             "assets/images/Gallerys/7.jpg",
-            "assets/images/Gallerys/8.jpg"
+            "assets/images/Gallerys/8.jpg",
+            "assets/images/Gallerys/9.jpg"
         ],
         letter: `Gửi Uyên... 🌷
 
@@ -220,7 +223,8 @@ Bảo Tuấn 🤍`,
             "assets/images/Gallerys/5.jpg",
             "assets/images/Gallerys/6.jpg",
             "assets/images/Gallerys/7.jpg",
-            "assets/images/Gallerys/8.jpg"
+            "assets/images/Gallerys/8.jpg",
+            "assets/images/Gallerys/9.jpg"
         ],
         letter: `Gửi Quỳnh... 🌷
 
@@ -252,7 +256,8 @@ Bảo Tú 🤍`,
             "assets/images/Gallerys/5.jpg",
             "assets/images/Gallerys/6.jpg",
             "assets/images/Gallerys/7.jpg",
-            "assets/images/Gallerys/8.jpg"
+            "assets/images/Gallerys/8.jpg",
+            "assets/images/Gallerys/9.jpg"
         ],
         letter: `Gửi Tú... 🌷
 
@@ -284,7 +289,8 @@ Thành Nhân 🤍`,
             "assets/images/Gallerys/5.jpg",
             "assets/images/Gallerys/6.jpg",
             "assets/images/Gallerys/7.jpg",
-            "assets/images/Gallerys/8.jpg"
+            "assets/images/Gallerys/8.jpg",
+            "assets/images/Gallerys/9.jpg"
         ],
         letter: `Gửi Trinh... 🌷
 
@@ -316,7 +322,8 @@ Trần Tiến 🤍`,
             "assets/images/Gallerys/5.jpg",
             "assets/images/Gallerys/6.jpg",
             "assets/images/Gallerys/7.jpg",
-            "assets/images/Gallerys/8.jpg"
+            "assets/images/Gallerys/8.jpg",
+            "assets/images/Gallerys/9.jpg"
         ],
         letter: `Gửi Thơ... 🌷
 
@@ -348,7 +355,8 @@ Anh Kiệt 🤍`,
             "assets/images/Gallerys/5.jpg",
             "assets/images/Gallerys/6.jpg",
             "assets/images/Gallerys/7.jpg",
-            "assets/images/Gallerys/8.jpg"
+            "assets/images/Gallerys/8.jpg",
+            "assets/images/Gallerys/9.jpg"
         ],
         letter: `Gửi Oanh... 🌷
 
@@ -380,7 +388,8 @@ Trần Thịnh 🤍`,
             "assets/images/Gallerys/5.jpg",
             "assets/images/Gallerys/6.jpg",
             "assets/images/Gallerys/7.jpg",
-            "assets/images/Gallerys/8.jpg"
+            "assets/images/Gallerys/8.jpg",
+            "assets/images/Gallerys/9.jpg"
         ],
         letter: `Gửi Hân... 🌷
 
@@ -412,7 +421,8 @@ Minh Trí 🤍`,
             "assets/images/Gallerys/5.jpg",
             "assets/images/Gallerys/6.jpg",
             "assets/images/Gallerys/7.jpg",
-            "assets/images/Gallerys/8.jpg"
+            "assets/images/Gallerys/8.jpg",
+            "assets/images/Gallerys/9.jpg"
         ],
         letter: `Gửi Nam... 🌷
 
@@ -444,7 +454,8 @@ Tuấn Đạt 🤍`,
             "assets/images/Gallerys/5.jpg",
             "assets/images/Gallerys/6.jpg",
             "assets/images/Gallerys/7.jpg",
-            "assets/images/Gallerys/8.jpg"
+            "assets/images/Gallerys/8.jpg",
+            "assets/images/Gallerys/9.jpg"
         ],
         letter: `Gửi Thư... 🌷
 
@@ -476,7 +487,8 @@ Huy Hoàng 🤍`,
             "assets/images/Gallerys/5.jpg",
             "assets/images/Gallerys/6.jpg",
             "assets/images/Gallerys/7.jpg",
-            "assets/images/Gallerys/8.jpg"
+            "assets/images/Gallerys/8.jpg",
+            "assets/images/Gallerys/9.jpg"
         ],
         letter: `Gửi Thảo... 🌷
 
@@ -508,7 +520,8 @@ Tuấn Kiệt 🤍`,
             "assets/images/Gallerys/5.jpg",
             "assets/images/Gallerys/6.jpg",
             "assets/images/Gallerys/7.jpg",
-            "assets/images/Gallerys/8.jpg"
+            "assets/images/Gallerys/8.jpg",
+            "assets/images/Gallerys/9.jpg"
         ],
         letter: `Gửi Ân... 🌷
 
@@ -540,7 +553,8 @@ Văn Tài 🤍`,
             "assets/images/Gallerys/5.jpg",
             "assets/images/Gallerys/6.jpg",
             "assets/images/Gallerys/7.jpg",
-            "assets/images/Gallerys/8.jpg"
+            "assets/images/Gallerys/8.jpg",
+            "assets/images/Gallerys/9.jpg"
         ],
         letter: `Gửi Trang... 🌷
 
@@ -572,7 +586,8 @@ Thân mến,
             "assets/images/Gallerys/5.jpg",
             "assets/images/Gallerys/6.jpg",
             "assets/images/Gallerys/7.jpg",
-            "assets/images/Gallerys/8.jpg"
+            "assets/images/Gallerys/8.jpg",
+            "assets/images/Gallerys/9.jpg"
         ],
         letter: `Gửi Lan... 🌷
 
@@ -604,7 +619,8 @@ Nhưng 🤍`,
             "assets/images/Gallerys/5.jpg",
             "assets/images/Gallerys/6.jpg",
             "assets/images/Gallerys/7.jpg",
-            "assets/images/Gallerys/8.jpg"
+            "assets/images/Gallerys/8.jpg",
+            "assets/images/Gallerys/9.jpg"
         ],
         letter: `Gửi Trâm... 🌷
 
@@ -636,7 +652,8 @@ Phú Quý 🤍`,
             "assets/images/Gallerys/5.jpg",
             "assets/images/Gallerys/6.jpg",
             "assets/images/Gallerys/7.jpg",
-            "assets/images/Gallerys/8.jpg"
+            "assets/images/Gallerys/8.jpg",
+            "assets/images/Gallerys/9.jpg"
         ],
         letter: `Gửi Nhi... 🌷
 
@@ -668,7 +685,8 @@ Gia Bảo 🤍`,
             "assets/images/Gallerys/5.jpg",
             "assets/images/Gallerys/6.jpg",
             "assets/images/Gallerys/7.jpg",
-            "assets/images/Gallerys/8.jpg"
+            "assets/images/Gallerys/8.jpg",
+            "assets/images/Gallerys/9.jpg"
         ],
         letter: `Gửi Như... 🌷
 
@@ -700,7 +718,8 @@ Trung Hiếu 🤍`,
             "assets/images/Gallerys/5.jpg",
             "assets/images/Gallerys/6.jpg",
             "assets/images/Gallerys/7.jpg",
-            "assets/images/Gallerys/8.jpg"
+            "assets/images/Gallerys/8.jpg",
+            "assets/images/Gallerys/9.jpg"
         ],
         letter: `Gửi Nhi... 🌷
 
@@ -732,7 +751,8 @@ Minh Quân 🤍`,
             "assets/images/Gallerys/5.jpg",
             "assets/images/Gallerys/6.jpg",
             "assets/images/Gallerys/7.jpg",
-            "assets/images/Gallerys/8.jpg"
+            "assets/images/Gallerys/8.jpg",
+            "assets/images/Gallerys/9.jpg"
         ],
         letter: `Gửi Ngân... 🌷
 
@@ -764,7 +784,8 @@ Phương Long 🤍`,
             "assets/images/Gallerys/5.jpg",
             "assets/images/Gallerys/6.jpg",
             "assets/images/Gallerys/7.jpg",
-            "assets/images/Gallerys/8.jpg"
+            "assets/images/Gallerys/8.jpg",
+            "assets/images/Gallerys/9.jpg"
         ],
         letter: `Gửi Như... 🌷
 
@@ -796,7 +817,8 @@ Bảo Toàn 🤍`,
             "assets/images/Gallerys/5.jpg",
             "assets/images/Gallerys/6.jpg",
             "assets/images/Gallerys/7.jpg",
-            "assets/images/Gallerys/8.jpg"
+            "assets/images/Gallerys/8.jpg",
+            "assets/images/Gallerys/9.jpg"
         ],
         letter: `Gửi Tú... 🌷
 
@@ -828,7 +850,8 @@ Minh Tâm 🤍`,
             "assets/images/Gallerys/5.jpg",
             "assets/images/Gallerys/6.jpg",
             "assets/images/Gallerys/7.jpg",
-            "assets/images/Gallerys/8.jpg"
+            "assets/images/Gallerys/8.jpg",
+            "assets/images/Gallerys/9.jpg"
         ],
         letter: `Gửi Diễm... 🌷
 
@@ -860,7 +883,8 @@ Thiên Ân 🤍`,
             "assets/images/Gallerys/5.jpg",
             "assets/images/Gallerys/6.jpg",
             "assets/images/Gallerys/7.jpg",
-            "assets/images/Gallerys/8.jpg"
+            "assets/images/Gallerys/8.jpg",
+            "assets/images/Gallerys/9.jpg"
         ],
         letter: `Gửi Nhi... 🌷
 
@@ -892,7 +916,8 @@ Ngọc Thiện 🤍`,
             "assets/images/Gallerys/5.jpg",
             "assets/images/Gallerys/6.jpg",
             "assets/images/Gallerys/7.jpg",
-            "assets/images/Gallerys/8.jpg"
+            "assets/images/Gallerys/8.jpg",
+            "assets/images/Gallerys/9.jpg"
         ],
         letter: `Gửi Anh... 🌷
 
@@ -924,7 +949,8 @@ Minh Vũ 🤍`,
             "assets/images/Gallerys/5.jpg",
             "assets/images/Gallerys/6.jpg",
             "assets/images/Gallerys/7.jpg",
-            "assets/images/Gallerys/8.jpg"
+            "assets/images/Gallerys/8.jpg",
+            "assets/images/Gallerys/9.jpg"
         ],
         letter: `Gửi Nhung... 🌷
 
@@ -956,7 +982,8 @@ Minh Tuệ 🤍`,
             "assets/images/Gallerys/5.jpg",
             "assets/images/Gallerys/6.jpg",
             "assets/images/Gallerys/7.jpg",
-            "assets/images/Gallerys/8.jpg"
+            "assets/images/Gallerys/8.jpg",
+            "assets/images/Gallerys/9.jpg"
         ],
         letter: `Gửi Thư... 🌷
 
@@ -988,7 +1015,8 @@ Lan Binh 🤍`,
             "assets/images/Gallerys/5.jpg",
             "assets/images/Gallerys/6.jpg",
             "assets/images/Gallerys/7.jpg",
-            "assets/images/Gallerys/8.jpg"
+            "assets/images/Gallerys/8.jpg",
+            "assets/images/Gallerys/9.jpg"
         ],
         letter: `Gửi Hân... 🌷
 
@@ -1020,7 +1048,8 @@ Minh Tâm 🤍`,
             "assets/images/Gallerys/5.jpg",
             "assets/images/Gallerys/6.jpg",
             "assets/images/Gallerys/7.jpg",
-            "assets/images/Gallerys/8.jpg"
+            "assets/images/Gallerys/8.jpg",
+            "assets/images/Gallerys/9.jpg"
         ],
         letter: `Gửi Uyên... 🌷
 
@@ -1052,7 +1081,8 @@ Bảo Tuấn 🤍`,
             "assets/images/Gallerys/5.jpg",
             "assets/images/Gallerys/6.jpg",
             "assets/images/Gallerys/7.jpg",
-            "assets/images/Gallerys/8.jpg"
+            "assets/images/Gallerys/8.jpg",
+            "assets/images/Gallerys/9.jpg"
         ],
         letter: `Gửi Trang... 🌷
 
@@ -1084,7 +1114,8 @@ Phương Long 🤍`,
             "assets/images/Gallerys/5.jpg",
             "assets/images/Gallerys/6.jpg",
             "assets/images/Gallerys/7.jpg",
-            "assets/images/Gallerys/8.jpg"
+            "assets/images/Gallerys/8.jpg",
+            "assets/images/Gallerys/9.jpg"
         ],
         letter: `Gửi Hân... 🌷
 
@@ -1118,7 +1149,8 @@ Trung Hiếu 🤍`,
             "assets/images/Gallerys/5.jpg",
             "assets/images/Gallerys/6.jpg",
             "assets/images/Gallerys/7.jpg",
-            "assets/images/Gallerys/8.jpg"
+            "assets/images/Gallerys/8.jpg",
+            "assets/images/Gallerys/9.jpg"
         ],
         letter: `Gửi Sơ Hương...🌷
         
@@ -1152,7 +1184,8 @@ Nhà Nam – Gia đình Sinh viên Đức Maria 🤍`,
             "assets/images/Gallerys/5.jpg",
             "assets/images/Gallerys/6.jpg",
             "assets/images/Gallerys/7.jpg",
-            "assets/images/Gallerys/8.jpg"
+            "assets/images/Gallerys/8.jpg",
+            "assets/images/Gallerys/9.jpg"
         ],
         letter: `Gửi Sơ Thay thân mến... 🌷
 
@@ -1178,15 +1211,12 @@ while(people.length < 36) {
     clone.id = people.length + 1;
     people.push(clone);
 }
-/* ========================================================
-   2. GLOBAL STATES
-======================================================== */
+
 let currentPerson = null;
 let currentScreen = "galaxy";
 let flowerBloomed = false;
 let isZooming = false; 
 
-// Ghi nhớ Tab truy cập trước đó (Mặc định là Profile)
 let currentActiveTabId = "tab-me";
 let previousTabId = "tab-me";
 
@@ -1203,9 +1233,6 @@ const musicTitleUI = document.getElementById('music-title');
 const audioToggleBtn = document.getElementById('audio-toggle');
 const tapToPlayBtn = document.getElementById('tap-to-play');
 
-/* ========================================================
-   3. GALAXY 3D
-======================================================== */
 let scene, camera, renderer, galaxyGroup;
 let starParticles;
 let raycaster, mouse;
@@ -1222,7 +1249,7 @@ function initThreeJSGalaxy() {
 
     camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 2000);
     const isMobile = window.innerWidth <= 768;
-    const initialCameraZ = isMobile ? 240 : 160; // 240 là độ xa vừa phải cho điện thoại
+    const initialCameraZ = isMobile ? 240 : 160;
     camera.position.set(0, 0, initialCameraZ);
     camera.lookAt(0, 0, 0);
     
@@ -1390,15 +1417,12 @@ function createFibonacciImageSphere() {
     const phi = Math.PI * (3 - Math.sqrt(5)); 
     const verticalSpread = 0.75; 
 
-    // 1. Tách riêng người có ID = 1 và xáo trộn ngẫu nhiên những người còn lại
-    const centerId = 1; // ID bạn muốn xuất hiện trực diện
+    const centerId = 1;
     const specialPerson = people.find(p => p.id === centerId);
     let otherPeople = people.filter(p => p.id !== centerId);
     
-    // Xáo trộn mảng những người còn lại
     otherPeople.sort(() => Math.random() - 0.5);
 
-    // 2. Tính toán toàn bộ các vị trí trên tinh cầu và lưu vào 1 mảng trước khi vẽ
     let positions = [];
     for (let i = 0; i < totalImages; i++) {
         let y = 1 - (i / (totalImages - 1)) * 2; 
@@ -1407,9 +1431,7 @@ function createFibonacciImageSphere() {
         const radiusAtY = Math.sqrt(1 - y * y); 
         const theta = phi * i; 
         
-        // Vẫn giữ nguyên độ nhấp nhô ngẫu nhiên của quả cầu gốc
-       // Cố định bán kính để quả cầu tròn đều, các ảnh sẽ luôn có kích thước bằng nhau
-const baseRadius = 110;
+        const baseRadius = 110;
         
         const posX = Math.cos(theta) * radiusAtY * baseRadius; 
         const posY = y * baseRadius; 
@@ -1418,7 +1440,6 @@ const baseRadius = 110;
         positions.push({ posX, posY, posZ, originalIndex: i });
     }
 
-    // 3. Tìm vị trí trực diện nhất (Vị trí có trục Z lớn nhất tức là nhô ra gần camera nhất)
     let bestIndex = 0;
     let maxZ = -Infinity;
     for (let i = 0; i < positions.length; i++) {
@@ -1428,27 +1449,24 @@ const baseRadius = 110;
         }
     }
 
-    // 4. Bắt đầu vẽ ảnh lên tinh cầu
     const isMobile = window.innerWidth <= 768;
     const imageSize = isMobile ? 26 : 19; 
     const planeGeo = new THREE.PlaneGeometry(imageSize, imageSize); 
     
-    let otherIndex = 0; // Biến đếm cho mảng otherPeople đã xáo trộn
+    let otherIndex = 0;
 
     positions.forEach((pos, index) => {
         let personData;
         
-        // Nếu đây là vị trí trực diện nhất -> Gán cho ID 1
         if (index === bestIndex && specialPerson) {
             personData = specialPerson;
         } 
-        // Các vị trí khác -> Rút lần lượt từ mảng những người đã xáo trộn ngẫu nhiên
         else {
             personData = otherPeople[otherIndex];
             otherIndex++;
         }
 
-        if (!personData) return; // Đảm bảo không bị lỗi nếu thiếu data
+        if (!personData) return;
 
         createRoundedImageTexture(personData.image, personData.name, (texture) => {
             const material = new THREE.MeshBasicMaterial({ map: texture, side: THREE.DoubleSide, transparent: true });
@@ -1494,7 +1512,6 @@ function onDragEnd(event) {
         const intersects = raycaster.intersectObjects(galaxyGroup.children, false);
         for (let i = 0; i < intersects.length; i++) {
     if (intersects[i].object.userData && intersects[i].object.userData.isTarget) {
-        // Lấy vị trí camera hiện tại trừ đi 20 để tự động tính khoảng cách mặt trước
         const frontFaceLimit = camera.position.z - 20; 
         if (intersects[i].distance < frontFaceLimit) { 
             handleStarClick(intersects[i].object); 
@@ -1508,20 +1525,17 @@ function animateGalaxy() {
     if(currentScreen === 'galaxy') {
         requestAnimationFrame(animateGalaxy);
         
-        // 1. Chỉ xoay cả group khi người dùng kéo (không dùng cho cinematic)
         if (!isZooming) {
             galaxyGroup.rotation.y += rotVy; galaxyGroup.rotation.x += rotVx;
             galaxyGroup.rotation.x = Math.max(-Math.PI/2.1, Math.min(Math.PI/2.1, galaxyGroup.rotation.x));
             if (!isDraggingGalaxy) { rotVx *= friction; rotVy *= friction; }
         }
 
-        // 2. 🟢 LUÔN xoay đốm sao (kể cả khi đang zoom / cinematic)
         if (starParticles) {
             starParticles.rotation.y -= 0.0003;
             starParticles.material.opacity = 0.6 + Math.sin(performance.now() * 0.0015) * 0.2;
         }
 
-        // 3. 🟢 LUÔN xoay quả cầu trung tâm và vành đai chữ
         const planet = galaxyGroup.getObjectByName("centralPlanet");
         if(planet) { 
             planet.rotation.y += 0.005; planet.rotation.x += 0.002; 
@@ -1529,7 +1543,6 @@ function animateGalaxy() {
             if(ring1) ring1.rotation.y += 0.005; if(ring2) ring2.rotation.y -= 0.005;
         }
 
-        // 4. Xử lý quay mặt ảnh về phía camera
         const localCameraPos = camera.position.clone(); galaxyGroup.worldToLocal(localCameraPos);
 
         galaxyGroup.children.forEach(child => {
@@ -1558,7 +1571,6 @@ function handleStarClick(mesh) {
     isZooming = true; rotVx = 0; rotVy = 0; 
     currentPerson = mesh.userData.personData;
     
-    // --- GỌI HÀM ÂM THANH TỰ TẠO BẰNG CODE ---
     playSciFiZoomSound();
 
     const foundMsg = document.getElementById('star-found-message');
@@ -1577,12 +1589,11 @@ function handleStarClick(mesh) {
     const cameraDest = targetPos.clone().add(normal.multiplyScalar(zoomDistance)); 
 
     const zoomDuration = 1500; const startTime = Date.now();
-    let textShown = false; // Biến đánh dấu chữ đã hiện hay chưa
+    let textShown = false;
     
     function zoomCamera() {
         const now = Date.now(); let progress = (now - startTime) / zoomDuration; if (progress > 1) progress = 1;
         
-        // --- 2. HIỆN CHỮ KHI GẦN TỚI NƠI (Đi được 75% quãng đường) ---
         if (progress > 0.45 && !textShown && foundMsg) {
             textShown = true;
             foundMsg.classList.remove('hidden');
@@ -1613,9 +1624,6 @@ function handleStarClick(mesh) {
     zoomCamera();
 }
 
-/* ========================================================
-   4. LOGIC PASSCODE
-======================================================== */
 let enteredPasscode = ""; 
 const passDots = document.querySelectorAll('.dot');
 const errorMsg = document.getElementById('unlock-error');
@@ -1645,23 +1653,19 @@ function setupUnlockScreen() {
     createFloatingHearts();
 }
 
-
 document.querySelectorAll('.keypad-btn').forEach(btn => {
     btn.addEventListener('click', (e) => {
         if (isZooming) return; 
 
-        // 🟢 XỬ LÝ NÚT QUAY VỀ TINH CẦU
         const clickedBtn = e.target.closest('.keypad-btn');
         if (clickedBtn && clickedBtn.id === 'passcode-back-btn') {
             if (typeof playArtisticTabSound === 'function') playArtisticTabSound();
             resetToGalaxyHome(); 
-            return; // Dừng lại
+            return;
         }
 
-        // GỌI HÀM PHÁT TIẾNG ĐÀN PIANO
         playRandomPianoNote();
 
-        // HIỆU ỨNG TRÁI TIM BAY TỪ PHÍM
         const heart = document.createElement('div');
         heart.innerHTML = '❤️'; 
         heart.className = 'mini-flying-heart';
@@ -1675,11 +1679,9 @@ document.querySelectorAll('.keypad-btn').forEach(btn => {
 
         const key = e.target.getAttribute('data-key');
         
-        // 🟢 XỬ LÝ XÓA LÙI (Xóa từng số 1)
         if (key === 'delete') {
             enteredPasscode = enteredPasscode.slice(0, -1);
         } 
-        // XỬ LÝ NHẬP SỐ
         else if (key) {
             if (enteredPasscode.length < 4) {
                 enteredPasscode += key;
@@ -1689,7 +1691,6 @@ document.querySelectorAll('.keypad-btn').forEach(btn => {
         updateDots(enteredPasscode.length);
         errorMsg.classList.add('hidden');
 
-        // 🟢 TỰ ĐỘNG MỞ KHÓA KHI ĐỦ 4 SỐ
         if (enteredPasscode.length === 4) {
             checkPasscode(enteredPasscode);
         }
@@ -1727,13 +1728,18 @@ function checkPasscode(passcodeToCheck) {
         isZooming = true;
         playSuccessPianoMelody();
 
-        // 🟢 CHỈ CHẠY TRÊN IPHONE: Mở khóa âm thanh ngầm từ lúc nhập đúng mật khẩu
         const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
         if (isIOS) {
-            bgMusic.src = currentPerson.music;
-            bgMusic.volume = 0; // Tắt tiếng để không phát ra ngoài
-            bgMusic.play().catch(e => console.log("iOS audio unlock:", e));
-        }
+    bgMusic.src = currentPerson.music;
+    bgMusic.muted = true;
+    bgMusic.volume = 0;
+    bgMusic.play()
+        .then(() => {
+            bgMusic.muted = true;
+            bgMusic.volume = 0;
+        })
+        .catch(e => console.log("iOS audio unlock:", e));
+}
 
         setTimeout(() => {
             isZooming = false;
@@ -1745,9 +1751,6 @@ function checkPasscode(passcodeToCheck) {
     }
 }
 
-/* ========================================================
-   5. HOA HỒNG NỞ & CHỮ HƯỚNG DẪN
-======================================================== */
 function startFlowerAnimation() {
     if (flowerBloomed) return;
     const flowerScreen = document.getElementById('screen-flower');
@@ -1766,13 +1769,11 @@ function startFlowerAnimation() {
     const tulipCss = document.getElementById('tulip-css-container');
     const bloomedRose = document.getElementById('bloomed-rose');
     
-    // KIỂM TRA: Nếu là Đào Thụy Phương Uyên (flowerTheme === "tulip")
     if (currentPerson.flowerTheme === "tulip") {
         if (roseSvg) roseSvg.style.display = 'none';
         if (tulipCss) {
             tulipCss.style.display = 'flex';
             
-            // Kích hoạt hiển thị bó hoa giấy gói sau 2.5 giây giống hệt Video
             setTimeout(() => {
                 const ramoEl = tulipCss.querySelector('.ramo');
                 if (ramoEl) ramoEl.classList.add('ramo-visible');
@@ -1804,7 +1805,6 @@ function startFlowerAnimation() {
     }, 8500); 
 }
 
-// Cập nhật sự kiện click chuyển tab cho tệp Tulip CSS
 function setupFlowerClickListener() {
     const roseEl = document.getElementById('flower-svg');
     const tulipCss = document.getElementById('tulip-css-container');
@@ -1825,21 +1825,10 @@ function goToPinkTabsScreen() {
     transitionTo('pinkTabs');
     setupPinkTabsData();
 }
-/* ========================================================
-   7 NHÓM CÂU THÔNG ĐIỆP PROFILE (TAB ME)
-======================================================== */
 
-// [0] → Nhóm 1: Dành riêng cho 1 người
-// [1] → Nhóm 2: Dành riêng cho 2 người
-// [2] → [6]: 5 câu còn lại, phát ngẫu nhiên
 const quoteMessages = [
-    // ===== NHÓM 1: 1 NGƯỜI =====
     "Chúc cô gái nhỏ luôn can đảm theo đuổi ước mơ. Bạn đã cố gắng hết sức rồi, hãy an tâm bước tiếp vì phía sau luôn có người chờ bạn. ❤️✨",
-
-    // ===== NHÓM 2: 2 NGƯỜI =====
-    // ===== NHÓM 2: 2 NGƯỜI =====
     `“Nguyện Đức Chúa chúc lành và gìn giữ anh em! Nguyện Đức Chúa tươi nét mặt nhìn đến anh em và dủ lòng thương anh em!”<br><span class="quote-citation">(Dân số 6,24-25)</span>`,
-    // ===== NHÓM 3-7: PHÁT NGẪU NHIÊN =====
     "Chúc cô gái luôn âm thầm nỗ lực sẽ có ngày được mỉm cười thật tươi khi nhìn lại những gì mình đã vượt qua. 🌼",
     "Cảm ơn bạn vì đã không bỏ cuộc, kể cả trong những ngày chẳng dễ dàng. Mong bạn luôn tự hào về chính mình! 🌷",
     "Mong bạn không vì một lần thất bại mà nghi ngờ bản thân, bởi mỗi lần đứng dậy đều giúp bạn trưởng thành hơn. ❤️",
@@ -1847,39 +1836,21 @@ const quoteMessages = [
     "Chúc bạn giữ mãi sự dịu dàng nhưng không yếu đuối, sự khiêm nhường nhưng không tự ti và một trái tim luôn đầy hy vọng. 🌷"
 ];
 
-/* 🔧 CẤU HÌNH ID NHẬN CÂU ĐẶC BIỆT
-   - Key = ID của người (trong mảng people)
-   - Value = index của câu trong quoteMessages
-   
-   👉 Bạn chỉ cần sửa 3 con số ID ở đây là xong!
-*/
 const SPECIAL_QUOTE_CONFIG = {
-    // Nhóm 1: Dành riêng cho 1 người
-    1: 0,           // ID 1 → nhận quoteMessages[0]
-
-    // Nhóm 2: Dành riêng cho 2 người
-    35: 1,          // ID 14 → nhận quoteMessages[1]
-    36: 1           // ID 26 → nhận quoteMessages[1]
-    // (Bạn có thể đổi 14, 26 thành bất kỳ ID nào bạn muốn)
+    1: 0,
+    35: 1,
+    36: 1
 };
 
-/* Hàm lấy câu thông điệp cho từng ID
-   → Kết quả LUÔN CỐ ĐỊNH, không đổi dù reload trang hay mở trên máy khác
-*/
 function getQuoteForPerson(personId) {
-    // 1. Nếu ID nằm trong nhóm đặc biệt
     if (SPECIAL_QUOTE_CONFIG[personId] !== undefined) {
         return quoteMessages[SPECIAL_QUOTE_CONFIG[personId]];
     }
 
-    // 2. Các ID còn lại: băm ID để chọn ngẫu nhiên 1 trong 5 câu [2..6]
-    // Công thức hash đơn giản, đảm bảo mỗi ID luôn ra CÙNG 1 câu
     const randomIndex = 2 + ((personId * 7 + 13) % 5);
     return quoteMessages[randomIndex];
 }
-/* ========================================================
-   6. GIAO DIỆN TONE HỒNG 3 MỤC & LOGIC CHUYỂN TAB CẬP NHẬT
-======================================================== */
+
 function setupPinkTabsData() {
     document.getElementById('me-tab-image').src = currentPerson.image;
     document.getElementById('me-tab-name').innerText = currentPerson.name;
@@ -1893,7 +1864,7 @@ function setupPinkTabsData() {
     setupGalleryData(); 
     const floatingBg = document.getElementById('floating-bg-container');
     if (floatingBg) {
-        if (currentPerson.id === 1) { // Bạn có thể đổi số 1 thành ID bạn muốn
+        if (currentPerson.id === 1) {
             floatingBg.style.display = 'block';
         } else {
             floatingBg.style.display = 'none';
@@ -1913,28 +1884,23 @@ function setupMusicPopup() {
     
     popupList.innerHTML = ''; 
 
-    // Lấy tên bài hát đang phát hiện tại (hoặc mặc định nếu chưa phát)
     const currentPlayingTitle = musicTitleUI.innerText || currentPerson.musicTitle;
-    triggerName.innerText = currentPlayingTitle; // Hiển thị tên bài lên nút bấm
+    triggerName.innerText = currentPlayingTitle;
 
-    // Gom bài hát mặc định và danh sách extraMusic thành 1 mảng
     let allMusic = [{ title: currentPerson.musicTitle, src: currentPerson.music }];
     if (currentPerson.extraMusic && currentPerson.extraMusic.length > 0) {
         allMusic = allMusic.concat(currentPerson.extraMusic);
     }
 
-    // Mở Popup khi bấm nút
     triggerBtn.onclick = () => {
         popupModal.classList.remove('hidden');
     };
 
-    // Đóng Popup khi bấm nút X hoặc bấm ra vùng mờ
     closePopupBtn.onclick = () => popupModal.classList.add('hidden');
     popupModal.onclick = (e) => {
         if (e.target === popupModal) popupModal.classList.add('hidden');
     };
 
-    // Tạo các mục bài hát trong Popup
     allMusic.forEach((musicItem) => {
         const item = document.createElement('div');
         item.className = 'music-popup-item';
@@ -1949,35 +1915,28 @@ function setupMusicPopup() {
         }
 
         item.onclick = () => {
-            // Cập nhật nhạc
             bgMusic.src = musicItem.src;
             musicTitleUI.innerText = musicItem.title;
-            triggerName.innerText = musicItem.title; // Đổi tên hiển thị trên nút bấm
+            triggerName.innerText = musicItem.title;
             
-            // Phát nhạc
             bgMusic.play().catch(e => console.log(e));
             if (tapToPlayBtn) tapToPlayBtn.classList.add('hidden');
             
-            // Cập nhật trạng thái hiển thị của các bài trong Popup
             document.querySelectorAll('.music-popup-item').forEach(b => {
                 b.classList.remove('playing');
                 b.innerHTML = b.innerHTML.replace('🎶', '🎵');
             });
             item.classList.add('playing');
             item.innerHTML = `<span>🎶</span> ${musicItem.title}`;
-            
-            // Đã xóa phần tự động tắt ở đây! Popup sẽ giữ nguyên cho đến khi bạn tự bấm X.
         };
 
         popupList.appendChild(item);
     });
 }
-// Thêm biến để xử lý việc bấm ngoài menu thì tự đóng
 document.addEventListener('click', function(e) {
     const toggleBtn = document.getElementById('music-dropdown-toggle');
     const dropdownList = document.getElementById('music-dropdown-list');
     
-    // Nếu bấm ra ngoài khung nhạc thì tự động đóng menu
     if (toggleBtn && dropdownList) {
         if (!e.target.closest('.music-tray-container')) {
             toggleBtn.classList.remove('active');
@@ -1993,9 +1952,8 @@ function setupMusicTray() {
     
     if (!toggleBtn || !dropdownList || !currentPerson) return;
     
-    dropdownList.innerHTML = ''; // Xóa danh sách cũ đi khi đổi tài khoản
+    dropdownList.innerHTML = '';
     
-    // Gắn sự kiện đóng/mở menu khi bấm vào thanh chọn (tránh bị gắn trùng nhiều lần)
     const newToggleBtn = toggleBtn.cloneNode(true);
     toggleBtn.parentNode.replaceChild(newToggleBtn, toggleBtn);
     
@@ -2004,7 +1962,6 @@ function setupMusicTray() {
         dropdownList.classList.toggle('show');
     });
 
-    // Gom bài hát mặc định và danh sách extraMusic thành 1 mảng
     let allMusic = [{ title: currentPerson.musicTitle, src: currentPerson.music }];
     if (currentPerson.extraMusic && currentPerson.extraMusic.length > 0) {
         allMusic = allMusic.concat(currentPerson.extraMusic);
@@ -2012,10 +1969,8 @@ function setupMusicTray() {
 
     const currentPlayingTitle = musicTitleUI.innerText;
     
-    // Cập nhật tên hiển thị bên ngoài thanh chọn
     currentNameEl.innerText = currentPlayingTitle;
 
-    // Tạo các mục bài hát trong thanh cuộn
     allMusic.forEach((musicItem) => {
         const item = document.createElement('div');
         item.className = 'music-item';
@@ -2030,16 +1985,13 @@ function setupMusicTray() {
         }
 
         item.addEventListener('click', () => {
-            // Cập nhật nhạc
             bgMusic.src = musicItem.src;
             musicTitleUI.innerText = musicItem.title;
-            currentNameEl.innerText = musicItem.title; // Đổi tên hiển thị ngoài thanh thả
+            currentNameEl.innerText = musicItem.title;
             
-            // Phát nhạc
             bgMusic.play().catch(e => console.log(e));
             if(tapToPlayBtn) tapToPlayBtn.classList.add('hidden');
             
-            // Cập nhật trạng thái hiển thị của các dòng trong menu
             document.querySelectorAll('.music-item').forEach(b => {
                 b.classList.remove('playing');
                 b.innerHTML = b.innerHTML.replace('🎶', '🎵');
@@ -2047,7 +1999,6 @@ function setupMusicTray() {
             item.classList.add('playing');
             item.innerHTML = `<span>🎶</span> ${musicItem.title}`;
             
-            // Chọn xong thì tự động đóng menu thả xuống
             newToggleBtn.classList.remove('active');
             dropdownList.classList.remove('show');
         });
@@ -2056,14 +2007,11 @@ function setupMusicTray() {
     });
 }
 
-// Bắt sự kiện chuyển Tab
-// Bắt sự kiện chuyển Tab
 document.querySelectorAll('.tab-btn').forEach(btn => {
     btn.addEventListener('click', (e) => {
         const tabBtn = e.target.closest('.tab-btn');
         if (!tabBtn) return;
         
-        // 1. GỌI ÂM THANH UI NGHỆ THUẬT KHI BẤM CHUYỂN MỤC
         playArtisticTabSound();
 
         const targetTabId = tabBtn.getAttribute('data-tab');
@@ -2071,26 +2019,21 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
     });
 });
 
-// HÀM TẠO ÂM THANH "GÕ PHÍM/UI" NGHỆ THUẬT, ÊM TAI
 function playArtisticTabSound() {
     try {
         const AudioContext = window.AudioContext || window.webkitAudioContext;
         if (!AudioContext) return;
-        const ctx = new AudioContext();
+        const ctx = getAudioContext();
         const now = ctx.currentTime;
 
         const osc = ctx.createOscillator();
         const gain = ctx.createGain();
 
-        // Dùng sóng Sine để tạo âm thanh tròn trịa, thuần khiết (giống tiếng giọt nước hoặc phím đàn mềm)
         osc.type = 'sine'; 
         
-        // Vuốt âm cực nhanh từ cao xuống thấp (1000Hz rớt xuống 400Hz trong 0.07 giây)
-        // Tạo cảm giác "tóp" rất có lực chạm nhưng lại cực kỳ êm ái
         osc.frequency.setValueAtTime(1000, now); 
         osc.frequency.exponentialRampToValueAtTime(400, now + 0.07); 
 
-        // Âm lượng mức 25%, tắt lịm dần trong 0.1 giây tạo độ vang tinh tế
         gain.gain.setValueAtTime(0.25, now); 
         gain.gain.exponentialRampToValueAtTime(0.001, now + 0.1); 
 
@@ -2103,17 +2046,14 @@ function playArtisticTabSound() {
 }
 
 function switchTab(tabId) {
-    // NẾU LÀ TAB GIFT (tab-sec3) -> MỞ NGAY VIDEO GIFT
     if (tabId === 'tab-sec3') {
         openGiftModal();
         return;
     }
 
-    // Ghi nhớ tab vừa truy cập
     previousTabId = tabId;
     currentActiveTabId = tabId;
 
-    // Cập nhật nút active
     document.querySelectorAll('.tab-btn').forEach(btn => {
         if(btn.getAttribute('data-tab') === tabId) {
             btn.classList.add('active');
@@ -2122,7 +2062,6 @@ function switchTab(tabId) {
         }
     });
 
-    // Cập nhật khung nội dung active
     document.querySelectorAll('.tab-pane').forEach(pane => {
         if(pane.id === tabId) {
             pane.classList.add('active');
@@ -2136,7 +2075,6 @@ function switchTab(tabId) {
     conveyorTracks.forEach(track => {
         track.style.animationPlayState = isImageTab ? 'running' : 'paused';
     });
-        // 🟢 Bật/tắt nút chỉnh sửa album theo tab đang active
     const editBtn = document.getElementById('toggle-gallery-edit');
     if (editBtn) {
         if (tabId === 'tab-sec4') {
@@ -2147,25 +2085,21 @@ function switchTab(tabId) {
     }
 }
 
-/* ========================================================
-   7. ÂM NHẠC & TIỆN ÍCH
-======================================================== */
 function initMusic() {
     const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
     
     if (isIOS) {
-        // Nếu trên iPhone: Nhạc đã được play ngầm từ lúc nhập passcode
-        if (!bgMusic.paused) {
-            bgMusic.currentTime = 0; // Tua lại về đầu bài hát
-            bgMusic.volume = 1;      // Bật âm lượng lên
-        } else {
-            // Phòng hờ nếu bị lỗi (fallback)
-            bgMusic.src = currentPerson.music;
-            bgMusic.volume = 1;
-            bgMusic.play().catch(e => tapToPlayBtn.classList.remove('hidden'));
-        }
+    if (!bgMusic.paused) {
+        bgMusic.currentTime = 0;
+        bgMusic.muted = false;
+        bgMusic.volume = 1;
     } else {
-        // 💻 TRÊN MÁY TÍNH VÀ ANDROID: Giữ nguyên 100% logic cũ (Tự động phát)
+        bgMusic.src = currentPerson.music;
+        bgMusic.muted = false;
+        bgMusic.volume = 1;
+        bgMusic.play().catch(e => tapToPlayBtn.classList.remove('hidden'));
+    }
+} else {
         bgMusic.src = currentPerson.music; 
         bgMusic.volume = 1;
         const playPromise = bgMusic.play();
@@ -2200,7 +2134,6 @@ function playCinematicIntro(onComplete) {
     rotVx = 0; 
     rotVy = 0;
     
-    // Resume / play nhạc (an toàn cho iOS)
     introMusic.volume = 0.7;
     try {
         if (introMusic.readyState >= 1) introMusic.currentTime = 0;
@@ -2220,9 +2153,8 @@ function playCinematicIntro(onComplete) {
     const returnCameraZ = isMobile ? 240 : 160;
     const lerp = (a, b, t) => a + (b - a) * t;
 
-    // FOV rộng hơn CHỈ cho điện thoại — GIỮ 70
-const originalFov = camera.fov;      // 60 (giá trị gốc)
-let cinematicFov = originalFov;       // biến lưu FOV lúc cinematic
+const originalFov = camera.fov;
+let cinematicFov = originalFov;
 if (isMobile) {
     cinematicFov = 70;
     camera.fov = cinematicFov;
@@ -2276,9 +2208,6 @@ if (isMobile) {
         }
     ];
 
-    // ============================================================
-    // BỘ THÔNG SỐ PC — 100% GIỐNG CODE GỐC, KHÔNG ĐỔI GÌ
-    // ============================================================
     const introPhasesDesktop = [
         { 
             duration: 6900, 
@@ -2352,8 +2281,6 @@ if (isMobile) {
         galaxyGroup.rotation.y = lerp(phase.startRotY, phase.endRotY, ease);
 galaxyGroup.rotation.x = lerp(phase.startRotX, phase.endRotX, ease);
 
-// 🟢 Trong phase cuối (index 4), FOV chuyển MƯỢT từ 70 → 60
-//    để không bị "giật zoom vào" khi reset về góc chọn sao
 if (isMobile && currentPhase === 4) {
     camera.fov = lerp(cinematicFov, originalFov, ease);
     camera.updateProjectionMatrix();
@@ -2374,7 +2301,6 @@ renderer.render(scene, camera);
                 camera.lookAt(0, 0, 0);
                 galaxyGroup.rotation.set(0, 0, 0);
                 
-                // Trả FOV về ban đầu (PC = 60, mobile = 60)
                 camera.fov = originalFov;
                 camera.updateProjectionMatrix();
                 
@@ -2390,7 +2316,6 @@ renderer.render(scene, camera);
     animateCinematicSequence();
 }
 
-/* Hàm fade out nhạc cinematic mượt mà (1.5 giây) */
 function fadeOutIntroMusic() {
     const fadeDuration = 1500;
     const fadeSteps = 30;
@@ -2416,9 +2341,6 @@ window.addEventListener('DOMContentLoaded', () => {
     initThreeJSGalaxy();
 });
 
-/* ========================================================
-   8. LOGIC MỞ PHONG BÌ THƯ & THU HỒI THƯ (CÓ ÂM THANH)
-======================================================== */
 let letterState = 0; 
 
 function setupLetterData() {
@@ -2433,7 +2355,6 @@ const photoPcEl = document.getElementById('letter-photo-pc');
     if (photoPcEl) {
         photoPcEl.src = currentPerson.image || "";
         
-        // 🟢 THÊM XỬ LÝ TỰ ĐỘNG PHÂN BIỆT ẢNH DỌC VÀ ẢNH NGANG
         photoPcEl.onload = function() {
             const frame = photoPcEl.closest('.pc-only-photo');
             if (frame) {
@@ -2447,14 +2368,13 @@ const photoPcEl = document.getElementById('letter-photo-pc');
             }
         };
 
-        // Nếu ảnh đã load xong từ trước (cache)
         if (photoPcEl.complete && photoPcEl.naturalWidth > 0) {
             photoPcEl.onload();
         }
     }
     const cornerFlower = document.getElementById('letter-flower-corner');
     if (cornerFlower) {
-        if (currentPerson.id === 1) { // 👈 Thay số 1 bằng ID bạn muốn gán hoa (ví dụ: 1, 2, 3...)
+        if (currentPerson.id === 1) {
             cornerFlower.style.display = 'block';
         } else {
             cornerFlower.style.display = 'none';
@@ -2479,7 +2399,6 @@ document.addEventListener('click', function(event) {
 
     if (letterState === 0) {
         if (clickedInsideEnvelope) {
-            // 1. TỪ 0 -> 1: Tiếng mở nắp bì thư / rút nhẹ tờ giấy ra
             playEnvelopeOpenSound();
 
             envelopeContainer.classList.remove('from-step-2');
@@ -2489,14 +2408,12 @@ document.addEventListener('click', function(event) {
     } 
     else if (letterState === 1) {
         if (clickedInsideEnvelope) {
-            // 2. TỪ 1 -> 2: Tiếng mở rộng tấm thư to ra
             playPaperExpandSound();
 
             envelopeContainer.classList.remove('step-1', 'from-step-2');
             envelopeContainer.classList.add('step-2');
             letterState = 2;
         } else {
-            // 3. TỪ 1 -> 0: Tiếng đóng/gấp lá thư giấy lại
             playPaperFoldSound();
 
             envelopeContainer.classList.remove('step-1', 'from-step-2');
@@ -2505,7 +2422,6 @@ document.addEventListener('click', function(event) {
     } 
     else if (letterState === 2) {
         if (!clickedInsideLetter) {
-            // 4. TỪ 2 -> 1: Tiếng thu nhỏ tờ thư về lại bước 1
             playPaperShrinkSound();
 
             envelopeContainer.classList.remove('step-2');
@@ -2518,12 +2434,6 @@ document.addEventListener('click', function(event) {
     }
 });
 
-
-/* ========================================================
-   CÁC HÀM TỔNG HỢP ÂM THANH CHO LÁ THƯ (WEB AUDIO API)
-======================================================== */
-
-// 1. Tiếng mở bì thư (0 -> 1): Tiếng sột soạt nhẹ của nắp phong bì
 function playEnvelopeOpenSound() {
     try {
         const AudioContext = window.AudioContext || window.webkitAudioContext;
@@ -2531,8 +2441,7 @@ function playEnvelopeOpenSound() {
         const ctx = new AudioContext();
         const now = ctx.currentTime;
 
-        // Tạo tiếng ồn trắng (White noise) để giả lập tiếng sột soạt giấy
-        const bufferSize = ctx.sampleRate * 0.15; // 0.15 giây
+        const bufferSize = ctx.sampleRate * 0.15;
         const buffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
         const data = buffer.getChannelData(0);
         for (let i = 0; i < bufferSize; i++) {
@@ -2542,7 +2451,6 @@ function playEnvelopeOpenSound() {
         const noise = ctx.createBufferSource();
         noise.buffer = buffer;
 
-        // Lọc tần số để tiếng giấy nghe ấm và thật hơn
         const filter = ctx.createBiquadFilter();
         filter.type = 'bandpass';
         filter.frequency.value = 1200;
@@ -2560,7 +2468,6 @@ function playEnvelopeOpenSound() {
     } catch (e) {}
 }
 
-// 2. Tiếng mở rộng tấm thư (1 -> 2): Tiếng lật/vung giấy to, ngân dài
 function playPaperExpandSound() {
     try {
         const AudioContext = window.AudioContext || window.webkitAudioContext;
@@ -2572,7 +2479,6 @@ function playPaperExpandSound() {
         const gain = ctx.createGain();
 
         osc.type = 'triangle';
-        // Tần số trượt lên tạo cảm giác mở rộng không gian
         osc.frequency.setValueAtTime(250, now);
         osc.frequency.linearRampToValueAtTime(450, now + 0.2);
 
@@ -2587,7 +2493,6 @@ function playPaperExpandSound() {
     } catch (e) {}
 }
 
-// 3. Tiếng thu nhỏ tờ thư (2 -> 1): Tiếng sột soạt gom giấy
 function playPaperShrinkSound() {
     try {
         const AudioContext = window.AudioContext || window.webkitAudioContext;
@@ -2599,7 +2504,6 @@ function playPaperShrinkSound() {
         const gain = ctx.createGain();
 
         osc.type = 'sawtooth';
-        // Tần số trượt xuống tạo cảm giác thu gọn lại
         osc.frequency.setValueAtTime(400, now);
         osc.frequency.linearRampToValueAtTime(200, now + 0.15);
 
@@ -2614,7 +2518,6 @@ function playPaperShrinkSound() {
     } catch (e) {}
 }
 
-// 4. Tiếng đóng lá thư giấy (1 -> 0): Tiếng sập nắp / gấp gọn cuối cùng
 function playPaperFoldSound() {
     try {
         const AudioContext = window.AudioContext || window.webkitAudioContext;
@@ -2640,9 +2543,6 @@ function playPaperFoldSound() {
     } catch (e) {}
 }
 
-/* ========================================================
-   9. LOGIC PHÁT VIDEO KHUNG HỒNG 16:9 & MODAL GIFT
-======================================================== */
 let wasMusicPlayingBeforeGift = false;
 
 function openGiftModal() {
@@ -2708,12 +2608,10 @@ function setupGiftVideoEvents() {
     const durationEl = document.getElementById('video-duration');
     const fullscreenBtn = document.getElementById('btn-fullscreen-mobile');
 
-    // Nút Đóng X
     if (closeBtn) {
         closeBtn.addEventListener('click', closeGiftModal);
     }
 
-    // Click ngoài modal
     if (videoModal) {
         videoModal.addEventListener('click', (e) => {
             if (e.target === videoModal) {
@@ -2722,7 +2620,6 @@ function setupGiftVideoEvents() {
         });
     }
 
-    // Nút Play / Pause
     if (playPauseBtn) {
         playPauseBtn.addEventListener('click', () => {
             if (giftVideo.paused) {
@@ -2735,21 +2632,18 @@ function setupGiftVideoEvents() {
         });
     }
 
-    // Nút Lùi -5s
     if (rewindBtn) {
         rewindBtn.addEventListener('click', () => {
             giftVideo.currentTime = Math.max(0, giftVideo.currentTime - 5);
         });
     }
 
-    // Nút Tua +5s
     if (forwardBtn) {
         forwardBtn.addEventListener('click', () => {
             giftVideo.currentTime = Math.min(giftVideo.duration || 0, giftVideo.currentTime + 5);
         });
     }
 
-    // Cập nhật thanh tiến trình
     if (giftVideo) {
         giftVideo.addEventListener('timeupdate', () => {
             if (giftVideo.duration) {
@@ -2765,7 +2659,6 @@ function setupGiftVideoEvents() {
         });
     }
 
-    // Tua video bằng thanh slider
     if (progressBar) {
         progressBar.addEventListener('input', (e) => {
             if (giftVideo.duration) {
@@ -2774,16 +2667,13 @@ function setupGiftVideoEvents() {
         });
     }
 
-    // 🟢 ĐÃ ĐƯA ĐOẠN NÀY VÀO TRONG HÀM - SỬA TRIỆT ĐỂ LỖI FULLSCREEN
     if (fullscreenBtn && giftVideo) {
         fullscreenBtn.addEventListener('click', (e) => {
             e.stopPropagation();
 
-            // 1. Dành cho Safari / iPhone (Phóng to trình phát video Native của iOS - Tự động quay ngang)
             if (giftVideo.webkitEnterFullscreen) {
                 giftVideo.webkitEnterFullscreen();
             } 
-            // 2. Dành cho Android / Chrome (Bật toàn màn hình + Ép khóa xoay màn hình ngang)
             else if (giftVideo.requestFullscreen) {
                 giftVideo.requestFullscreen().then(() => {
                     if (screen.orientation && screen.orientation.lock) {
@@ -2810,43 +2700,38 @@ document.addEventListener('DOMContentLoaded', () => {
     setupGiftVideoEvents();
 });
 
-// HÀM TẠO ÂM THANH RẢI ĐÀN HARP (Cực êm, không chói, không ngang)
 function playSciFiZoomSound() {
     try {
         const AudioContext = window.AudioContext || window.webkitAudioContext;
         if (!AudioContext) return;
-        const ctx = new AudioContext();
+        const ctx = getAudioContext();
         const now = ctx.currentTime;
 
-        // Dùng thang âm Ngũ cung (Pentatonic) êm dịu. 
-        // Giới hạn nốt cao nhất ở 1046Hz để tuyệt đối không bị chói tai.
         const notes = [
-            392.00, // G4
-            440.00, // A4
-            523.25, // C5
-            587.33, // D5
-            659.25, // E5
-            783.99, // G5
-            880.00, // A5
-            1046.50 // C6 (Nốt cao nhất, đủ sáng nhưng không chói)
+            392.00,
+            440.00,
+            523.25,
+            587.33,
+            659.25,
+            783.99,
+            880.00,
+            1046.50
         ];
 
-        // 1. ÂM NỀN (Pad) - Rất trầm, ấm và tĩnh (Giữ nguyên 1 nốt để hết bị "ngang")
         const padOsc = ctx.createOscillator();
         const padGain = ctx.createGain();
-        padOsc.type = 'sine'; // Sóng tròn mượt
-        padOsc.frequency.value = 261.63; // Nốt C4 trầm ấm làm nền vững
+        padOsc.type = 'sine';
+        padOsc.frequency.value = 261.63;
         
         padGain.gain.setValueAtTime(0, now);
-        padGain.gain.linearRampToValueAtTime(0.08, now + 0.5); // Âm lượng nền cực nhỏ (8%)
-        padGain.gain.exponentialRampToValueAtTime(0.001, now + 2.5); // Ngân dài 2.5 giây
+        padGain.gain.linearRampToValueAtTime(0.08, now + 0.5);
+        padGain.gain.exponentialRampToValueAtTime(0.001, now + 2.5);
         
         padOsc.connect(padGain);
         padGain.connect(ctx.destination);
         padOsc.start(now);
         padOsc.stop(now + 2.5);
 
-        // 2. CHUÔNG LẤP LÁNH - Đánh rải từ thấp lên cao như lướt đàn Harp
         notes.forEach((freq, index) => {
             const osc = ctx.createOscillator();
             const gain = ctx.createGain();
@@ -2854,14 +2739,11 @@ function playSciFiZoomSound() {
             osc.type = 'sine';
             osc.frequency.value = freq;
             
-            // Rải các nốt lần lượt cách nhau 0.07 giây (tạo cảm giác lướt tay mượt mà)
             const startTime = now + (index * 0.07); 
-            const duration = 2.0 + Math.random() * 0.5; // Mỗi nốt ngân dài 2 - 2.5 giây
+            const duration = 2.0 + Math.random() * 0.5;
             
             gain.gain.setValueAtTime(0, startTime);
-            // Nổi lên rất êm ái
-            gain.gain.linearRampToValueAtTime(0.025, startTime + 0.1); // Âm lượng siêu nhỏ (2.5%)
-            // Tắt dần từ từ lịm đi như tiếng chuông
+            gain.gain.linearRampToValueAtTime(0.025, startTime + 0.1);
             gain.gain.exponentialRampToValueAtTime(0.0001, startTime + duration);
             
             osc.connect(gain);
@@ -2874,92 +2756,92 @@ function playSciFiZoomSound() {
         console.log("Lỗi âm thanh", e);
     }
 }
-// HÀM TẠO ÂM THANH PIANO ÊM ÁI (Đô, Rê, Mi, Fa, Son, La, Si ngẫu nhiên)
 function playRandomPianoNote() {
     try {
-        const ctx = getAudioContext();  // ✅
+        const ctx = getAudioContext();
         if (!ctx) return;
-        const now = ctx.currentTime;
-        const notes = [523.25, 587.33, 659.25, 698.46, 783.99, 880.00, 987.77];
-        
-        // Chọn ngẫu nhiên 1 nốt trong mảng
-        const randomFreq = notes[Math.floor(Math.random() * notes.length)];
 
-        const osc = ctx.createOscillator();
-        const gain = ctx.createGain();
+        const doPlay = () => {
+            const now = ctx.currentTime;
+            const notes = [523.25, 587.33, 659.25, 698.46, 783.99, 880.00, 987.77];
+            const randomFreq = notes[Math.floor(Math.random() * notes.length)];
 
-        osc.type = 'sine'; // Dùng sóng tròn để tiếng êm như chuông/piano mềm
-        osc.frequency.value = randomFreq;
+            const osc = ctx.createOscillator();
+            const gain = ctx.createGain();
+            osc.type = 'sine';
+            osc.frequency.value = randomFreq;
+            gain.gain.setValueAtTime(0, now);
+            gain.gain.linearRampToValueAtTime(0.3, now + 0.02);
+            gain.gain.exponentialRampToValueAtTime(0.001, now + 1.0);
 
-        // Chỉnh âm lượng: Kêu lên ngay lập tức rồi tắt dần trong 1 giây (như khi gõ phím đàn)
-        gain.gain.setValueAtTime(0, now);
-        gain.gain.linearRampToValueAtTime(0.3, now + 0.02); // Âm lượng 30% đủ nghe không   bị chói
-        gain.gain.exponentialRampToValueAtTime(0.001, now + 1.0); // Ngân vang rồi tắt dần
+            osc.connect(gain);
+            gain.connect(ctx.destination);
 
-        osc.connect(gain);
-        gain.connect(ctx.destination);
+            osc.start(now);
+            osc.stop(now + 1.0);
+        };
 
-        osc.start(now);
-        osc.stop(now + 1.0);
+        if (ctx.state === 'running') {
+            doPlay();
+        } else {
+            ctx.resume().then(doPlay).catch(err => {
+                console.log("Resume fail, fallback:", err);
+                doPlay();
+            });
+        }
     } catch (e) {
         console.log("Lỗi phát âm thanh phím", e);
     }
 }
-
-// HÀM TẠO GIAI ĐIỆU PIANO BÁO THÀNH CÔNG KHI NHẬP ĐÚNG MẬT KHẨU
 function playSuccessPianoMelody() {
     try {
-        const ctx = getAudioContext();  // ✅
+        const ctx = getAudioContext();
         if (!ctx) return;
-        const now = ctx.currentTime;
 
-        // Chuỗi nốt nhạc vui tươi, đi lên (C5, E5, G5, C6, E6)
-        const notes = [523.25, 659.25, 783.99, 1046.50, 1318.51];
-        
-        notes.forEach((freq, index) => {
-            const osc = ctx.createOscillator();
-            const gain = ctx.createGain();
-            
-            osc.type = 'sine'; // Sóng tròn êm ái như piano/chuông
-            osc.frequency.value = freq;
-            
-            // Đánh các nốt liên tiếp, mỗi nốt cách nhau 0.12 giây
-            const startTime = now + (index * 0.12);
-            const duration = 2.0; // Mỗi nốt ngân vang 2 giây rồi mới tắt
-            
-            gain.gain.setValueAtTime(0, startTime);
-            gain.gain.linearRampToValueAtTime(0.3, startTime + 0.03); // Nổi âm lượng lên
-            gain.gain.exponentialRampToValueAtTime(0.001, startTime + duration); // Tắt dần
-            
-            osc.connect(gain);
-            gain.connect(ctx.destination);
-            
-            osc.start(startTime);
-            osc.stop(startTime + duration);
-        });
+        const doPlay = () => {
+            const now = ctx.currentTime;
+            const notes = [523.25, 659.25, 783.99, 1046.50, 1318.51];
+            notes.forEach((freq, index) => {
+                const osc = ctx.createOscillator();
+                const gain = ctx.createGain();
+                osc.type = 'sine';
+                osc.frequency.value = freq;
+                const startTime = now + (index * 0.12);
+                const duration = 2.0;
+                gain.gain.setValueAtTime(0, startTime);
+                gain.gain.linearRampToValueAtTime(0.3, startTime + 0.03);
+                gain.gain.exponentialRampToValueAtTime(0.001, startTime + duration);
+                osc.connect(gain);
+                gain.connect(ctx.destination);
+                osc.start(startTime);
+                osc.stop(startTime + duration);
+            });
+        };
+
+        if (ctx.state === 'running') {
+            doPlay();
+        } else {
+            ctx.resume().then(doPlay).catch(() => doPlay());
+        }
     } catch (e) {
         console.log("Lỗi âm thanh thành công", e);
     }
 }
-// ================= XỬ LÝ SỰ KIỆN BẤM VÀO AVATAR XEM ẢNH (BẢN TỰ ĐỘNG) =================
 document.addEventListener('click', function(e) {
-    // Tự động tìm khung avatar trong tab Profile hoặc ngoài màn hình khóa
     const clickedProfileAvatar = e.target.closest('.profile-avatar-frame');
     const clickedUnlockAvatar = e.target.closest('.unlock-avatar-wrapper');
     const modal = document.getElementById('image-viewer-modal');
     
-    // 1. Khi bấm trúng avatar trong mục Profile
     if (clickedProfileAvatar) {
         const imgElement = clickedProfileAvatar.querySelector('img');
         if (imgElement && modal) {
             const fullImg = document.getElementById('full-size-image');
             fullImg.src = imgElement.src; 
             modal.classList.add('active'); 
-            return; // Dừng lại để ảnh hiện lên
+            return;
         }
     }
 
-    // 2. Khi bấm trúng avatar ở màn hình nhập mật mã (Mở rộng thêm cho bạn)
     if (clickedUnlockAvatar) {
         const imgElement = clickedUnlockAvatar.querySelector('img');
         if (imgElement && modal) {
@@ -2970,54 +2852,37 @@ document.addEventListener('click', function(e) {
         }
     }
     
-    // 3. Khi đang bật ảnh mà bấm vào nền đen hoặc nút X thì tắt đi
     if (modal && modal.classList.contains('active')) {
         if (e.target.id === 'image-viewer-modal' || e.target.closest('.close-viewer')) {
             modal.classList.remove('active');
         }
     }
 });
-/* ========================================================
-   10. HIỆU ỨNG ÁNH SAO TOÀN MÀN HÌNH MỤC TONE HỒNG
-======================================================== */
-// Hàm vẽ ngôi sao lấp lánh tại tọa độ x, y
 function createSparkleEffect(x, y) {
     const star = document.createElement('div');
     star.className = 'sparkle-star';
     
-    // Chọn ngẫu nhiên hình dáng (sao 4 cánh, sao 5 cánh, lấp lánh)
     const icons = ['✦', '✨', '⭐', '💖'];
     star.innerText = icons[Math.floor(Math.random() * icons.length)];
     
-    // Chọn ngẫu nhiên 1 trong 4 màu sắc
     const colors = ['sparkle-color-1', 'sparkle-color-2', 'sparkle-color-3', 'sparkle-color-4'];
     star.classList.add(colors[Math.floor(Math.random() * colors.length)]);
     
-    // Đặt vị trí ngay tại đầu ngón tay/chuột
     star.style.left = x + 'px';
     star.style.top = y + 'px';
     
     document.body.appendChild(star);
     
-    // Tự động dọn dẹp sao sau khi bay xong (0.6 giây) để không làm nặng máy
     setTimeout(() => {
         star.remove();
     }, 600);
 }
 
-// Lắng nghe sự kiện click/chạm trên toàn bộ màn hình
 document.addEventListener('pointerdown', function(e) {
-    // CHỈ CHO PHÉP VẼ SAO KHI ĐANG Ở MÀN HÌNH 3 MỤC (pinkTabs)
     if (typeof currentScreen !== 'undefined' && currentScreen !== 'pinkTabs') return;
 
-    // Gọi hàm vẽ sao tại tọa độ click
     createSparkleEffect(e.clientX, e.clientY);
 });
-/* ========================================================
-   CÁC HÀM TỔNG HỢP ÂM THANH CHO LÁ THƯ (GIẤY CHÂN THỰC & ỔN ĐỊNH)
-======================================================== */
-
-// Khởi tạo một AudioContext duy nhất toàn cục để tránh lỗi "lúc kêu lúc không"
 let sharedAudioCtx = null;
 
 function getAudioContext() {
@@ -3025,21 +2890,18 @@ function getAudioContext() {
         const AudioContext = window.AudioContext || window.webkitAudioContext;
         sharedAudioCtx = new AudioContext();
     }
-    // "Đánh thức" audio nếu trình duyệt đang cho nó ngủ
     if (sharedAudioCtx.state === 'suspended') {
-        sharedAudioCtx.resume();
+        sharedAudioCtx.resume().catch(() => {});
     }
     return sharedAudioCtx;
 }
 
-// Hàm giả lập tiếng giấy với bộ lọc Lowpass trầm ấm và trượt tần số
 function createRefinedPaperSound(duration, startFreq, endFreq, type, maxGain, isDouble) {
     try {
         const ctx = getAudioContext();
         if (!ctx) return;
         const now = ctx.currentTime;
         
-        // Tăng độ nảy của nhiễu lên 0.85 để âm thanh phát ra to và rõ hơn
         const bufferSize = ctx.sampleRate * duration;
         const buffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
         const data = buffer.getChannelData(0);
@@ -3050,26 +2912,23 @@ function createRefinedPaperSound(duration, startFreq, endFreq, type, maxGain, is
         const noise = ctx.createBufferSource();
         noise.buffer = buffer;
 
-        // Bộ lọc Lowpass làm ấm tiếng, loại bỏ âm "chói"
         const filter = ctx.createBiquadFilter();
         filter.type = type; 
         filter.frequency.setValueAtTime(startFreq, now);
         if (startFreq !== endFreq) {
             filter.frequency.exponentialRampToValueAtTime(endFreq, now + duration);
         }
-        filter.Q.value = 1.0; // Tăng độ vang nhẹ để âm thanh dày hơn
+        filter.Q.value = 1.0;
 
         const gainNode = ctx.createGain();
         gainNode.gain.setValueAtTime(0, now);
         
         if (isDouble) {
-            // 2 nhịp vuốt giấy (Lúc mở tờ giấy to ra)
             gainNode.gain.linearRampToValueAtTime(maxGain, now + duration * 0.15);
             gainNode.gain.exponentialRampToValueAtTime(maxGain * 0.4, now + duration * 0.4);
             gainNode.gain.linearRampToValueAtTime(maxGain, now + duration * 0.65);
             gainNode.gain.exponentialRampToValueAtTime(0.01, now + duration);
         } else {
-            // 1 nhịp vuốt êm
             gainNode.gain.linearRampToValueAtTime(maxGain, now + duration * 0.1);
             gainNode.gain.exponentialRampToValueAtTime(0.01, now + duration);
         }
@@ -3084,28 +2943,21 @@ function createRefinedPaperSound(duration, startFreq, endFreq, type, maxGain, is
     }
 }
 
-// 1. Tiếng mở nắp phong bì (0 -> 1): maxGain = 1.5 để nghe rõ ràng tiếng sột soạt đầu tiên
 function playEnvelopeOpenSound() { 
     createRefinedPaperSound(0.35, 300, 800, 'lowpass', 1.5, false); 
 } 
 
-// 2. Tiếng mở giấy ra (1 -> 2): 2 nhịp vuốt giấy bản to, âm lượng vặn to lên 1.3
 function playPaperExpandSound() { 
     createRefinedPaperSound(0.5, 450, 600, 'lowpass', 1.3, true); 
 } 
 
-// 3. Tiếng gấp giấy lại (2 -> 1): Nhịp gấp chắc tay (maxGain = 1.4)
 function playPaperShrinkSound() { 
     createRefinedPaperSound(0.3, 700, 400, 'lowpass', 1.4, false); 
 } 
 
-// 4. Tiếng nhét giấy vào (1 -> 0): Nhịp đút vào phong bì trầm, lực đút mạnh vừa (maxGain = 1.2)
 function playPaperFoldSound() { 
     createRefinedPaperSound(0.4, 300, 200, 'lowpass', 1.2, false); 
 }
-/* ========================================================
-   LOGIC LOAD ẢNH TAB IMAGE (NÚT CHỈNH SỬA TRÒN GÓC PHẢI)
-======================================================== */
 let isGalleryEditing = false; 
 
 function getGalleryImages() {
@@ -3130,28 +2982,23 @@ function setupGalleryData() {
     
     galleryGrid.innerHTML = ''; 
     
-    // Cài đặt để thẻ cha có thể "neo" nút tròn ở góc
     const parent = galleryGrid.parentElement;
     parent.style.position = 'relative'; 
-    parent.style.paddingBottom = '70px'; // Tạo khoảng trống để nút không che mất ảnh cuối cùng
+    parent.style.paddingBottom = '70px';
     
     let editToggleBtn = document.getElementById('toggle-gallery-edit');
 
-// 1. Tạo nếu chưa có
 if (!editToggleBtn) {
     editToggleBtn = document.createElement('button');
     editToggleBtn.id = 'toggle-gallery-edit';
     editToggleBtn.className = 'toggle-edit-gallery-btn';
 }
 
-// 2. LUÔN gắn vào <body> để thoát stacking context của .pink-card
-// 2. Gắn vào thẻ cha (.pink-card) để nút nằm bên trong khung
 const galleryCard = galleryGrid.closest('.pink-card');
 if (galleryCard && editToggleBtn.parentElement !== galleryCard) {
     galleryCard.appendChild(editToggleBtn);
 }
 
-// 3. Gán lại onclick cho user hiện tại
 editToggleBtn.onclick = () => {
     isGalleryEditing = !isGalleryEditing;
     renderGalleryUI(editToggleBtn, galleryGrid);
@@ -3159,28 +3006,25 @@ editToggleBtn.onclick = () => {
     function renderGalleryUI(btn, grid) {
         grid.innerHTML = '';
         
-        // Mã vẽ icon Bút chì (giống hình bạn gửi) và icon Dấu tích
         const iconEdit = `<svg viewBox="0 0 512 512" style="width: 20px; height: 20px; fill: currentColor;"><path d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>`;
         
         const iconCheck = `<svg viewBox="0 0 448 512" style="width: 22px; height: 22px; fill: currentColor;"><path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>`;
 
-        // Chuyển đổi màu sắc nút tròn xen kẽ theo ý bạn
         if (isGalleryEditing) {
             grid.classList.add('edit-mode');
             btn.innerHTML = iconCheck; 
-            btn.style.background = '#ff4d6d'; // Nền hồng hết
-            btn.style.color = 'white';        // Icon màu trắng
+            btn.style.background = '#ff4d6d';
+            btn.style.color = 'white';
             btn.style.borderColor = '#ff4d6d';
         } else {
             grid.classList.remove('edit-mode');
-            btn.innerHTML = iconEdit; // Bút chì hình vuông
-            btn.style.background = 'rgba(255, 255, 255, 0.9)'; // Nền trắng trong
-            btn.style.color = '#ff4d6d';                       // Icon màu hồng
-            btn.style.borderColor = '#ffb3c6';                 // Viền hồng nhạt
+            btn.innerHTML = iconEdit;
+            btn.style.background = 'rgba(255, 255, 255, 0.9)';
+            btn.style.color = '#ff4d6d';
+            btn.style.borderColor = '#ffb3c6';
         }
         
         let imagesToLoad = getGalleryImages();
-            //if (currentPerson.id === 1 && !isGalleryEditing) {//
             if (!isGalleryEditing) {
             grid.classList.add('conveyor-belt');
             
@@ -3190,7 +3034,6 @@ editToggleBtn.onclick = () => {
             const trackBottom = document.createElement('div');
             trackBottom.className = 'conveyor-track track-right-to-left';
             
-            // 1. Chia ảnh cho 2 hàng
             const halfIndex = Math.ceil(imagesToLoad.length / 2);
             let topImages = imagesToLoad.slice(0, halfIndex);
             let bottomImages = imagesToLoad.slice(halfIndex);
@@ -3214,15 +3057,11 @@ editToggleBtn.onclick = () => {
                 });
             };
 
-            // --- TẠO VÒNG LẶP VÔ TẬN ĐỒNG BỘ TUYỆT ĐỐI ---
-            // 2. Nhân bản mảng gốc để dải ảnh kéo dài đủ bọc hết màn hình (ít nhất 15 ảnh mỗi nửa)
-            // Việc này đảm bảo khi dịch chuyển -50%, mảng ảnh không bao giờ bị lộ khoảng trống ban đầu.
             let baseTop = [];
             let baseBottom = [];
             while(baseTop.length < 15) { baseTop = baseTop.concat(topImages); }
             while(baseBottom.length < 15) { baseBottom = baseBottom.concat(bottomImages); }
 
-            // 3. Nạp vào đúng 2 lần (1 nửa gốc, 1 nửa bản sao) để khớp hoàn hảo với CSS -50%
             appendImagesToTrack(trackTop, baseTop);
             appendImagesToTrack(trackTop, baseTop);
 
@@ -3399,20 +3238,15 @@ editToggleBtn.onclick = () => {
     isGalleryEditing = false; 
     renderGalleryUI(editToggleBtn, galleryGrid);
 }
-/* ========================================================
-   11. ĐIỀU KHIỂN ÂM LƯỢNG (BẬT/TẮT VÀ GHI NHỚ MỨC CŨ)
-======================================================== */
 const volToggleBtn = document.getElementById('vol-toggle-btn');
 const volSlider = document.getElementById('vol-slider');
 const volSliderPopup = document.getElementById('vol-slider-popup');
 const svgVolOn = document.getElementById('svg-vol-on');
 const svgVolOff = document.getElementById('svg-vol-off');
 
-// Biến lưu giữ mức âm lượng trước khi tắt
 let previousVolume = 1; 
 
 if (volToggleBtn && volSlider) {
-    // Hàm cập nhật trạng thái Icon và thanh kéo
     const updateVolumeUI = (vol) => {
         if (vol > 0) {
             svgVolOn.style.display = 'block';
@@ -3424,58 +3258,45 @@ if (volToggleBtn && volSlider) {
         volSlider.value = vol;
     };
 
-    // 1. Nhấn nút Loa để Tắt/Mở
     volToggleBtn.addEventListener('click', (e) => {
-        e.stopPropagation(); // Không đóng popup ngay lập tức
-        if (typeof playArtisticTabSound === 'function') playArtisticTabSound(); // Kêu tiếng UI
+        e.stopPropagation();
+        if (typeof playArtisticTabSound === 'function') playArtisticTabSound();
         
         if (bgMusic.volume > 0) {
-            // Đang có tiếng -> Bấm là TẮT, đồng thời lưu lại mức âm đang nghe
             previousVolume = bgMusic.volume; 
             bgMusic.volume = 0;
         } else {
-            // Đang bị tắt -> Bấm là MỞ LẠI mức cũ (nếu cũ là 0 thì lên thẳng max 1)
             bgMusic.volume = previousVolume > 0 ? previousVolume : 1; 
         }
         
         updateVolumeUI(bgMusic.volume);
         
-        // Hiện thanh trượt trên mobile (tự động tắt khi click chỗ khác)
         volSliderPopup.classList.toggle('active');
     });
 
-    // 2. Vuốt kéo trực tiếp trên thanh trượt
     volSlider.addEventListener('input', (e) => {
         const newVol = parseFloat(e.target.value);
         bgMusic.volume = newVol;
         
-        // Chỉ ghi nhớ âm lượng nếu nó khác 0
         if (newVol > 0) previousVolume = newVol; 
         
         updateVolumeUI(newVol);
     });
     
-    // Ngăn chặn việc click vào thanh trượt làm tắt luôn thẻ
     volSliderPopup.addEventListener('click', (e) => {
         e.stopPropagation();
     });
 
-    // 3. Tự động ẩn thanh trượt đi nếu lướt chạm ra chỗ khác ngoài không gian nút loa
     document.addEventListener('click', (e) => {
         if (!e.target.closest('.volume-wrapper')) {
             volSliderPopup.classList.remove('active');
         }
     });
 }
-/* ==========================================================
-   AUTO-SHRINK: CHỈ THU NHỎ CHỮ KHI TÊN QUÁ DÀI
-   Tên ngắn giữ nguyên 100% kích thước gốc
-========================================================== */
 function autoFitText(el, minPx = 14) {
     if (!el) return;
-    if (el.offsetWidth === 0 && el.clientWidth === 0) return; // element đang ẩn
+    if (el.offsetWidth === 0 && el.clientWidth === 0) return;
 
-    // Lưu size gốc lần đầu (đo từ CSS thật, không dùng inline)
     if (!el.dataset.originalSize) {
         const prev = el.style.fontSize;
         el.style.fontSize = '';
@@ -3486,11 +3307,9 @@ function autoFitText(el, minPx = 14) {
     const maxSize = parseFloat(el.dataset.originalSize);
     if (!maxSize) return;
 
-    // Reset về size gốc rồi đo
     el.style.fontSize = maxSize + 'px';
-    void el.offsetWidth; // force reflow
+    void el.offsetWidth;
 
-    // Thu nhỏ 0.5px mỗi lần cho đến khi vừa
     let size = maxSize;
     let safety = 300;
     while (el.scrollWidth > el.clientWidth && size > minPx && safety-- > 0) {
@@ -3499,7 +3318,6 @@ function autoFitText(el, minPx = 14) {
     }
 }
 
-// ─── Galaxy name: chạy mỗi khi khung chữ được hiện ra ───
 const starMsgBox = document.getElementById('star-found-message');
 if (starMsgBox) {
     new MutationObserver(() => {
@@ -3509,21 +3327,18 @@ if (starMsgBox) {
     }).observe(starMsgBox, { attributes: true, attributeFilter: ['class'] });
 }
 
-// ─── Unlock name: chạy mỗi khi text đổi ───
 const unlockNameEl = document.getElementById('unlock-name');
 if (unlockNameEl) {
     new MutationObserver(() => autoFitText(unlockNameEl, 14))
         .observe(unlockNameEl, { childList: true, characterData: true, subtree: true });
 }
 
-// ─── Flower name: chạy mỗi khi text đổi ───
 const flowerNameEl = document.getElementById('flower-name');
 if (flowerNameEl) {
     new MutationObserver(() => autoFitText(flowerNameEl, 14))
         .observe(flowerNameEl, { childList: true, characterData: true, subtree: true });
 }
 
-// ─── Xoay màn hình / resize: chạy lại ───
 let _resizeTimer;
 window.addEventListener('resize', () => {
     clearTimeout(_resizeTimer);
@@ -3533,17 +3348,12 @@ window.addEventListener('resize', () => {
         autoFitText(document.getElementById('flower-name'), 14);
     }, 150);
 });
-/* ========================================================
-   NÚT QUAY VỀ MÀN HÌNH TINH CẦU BAN ĐẦU
-======================================================== */
 function resetToGalaxyHome() {
-    // 1. Dừng nhạc
     if (typeof bgMusic !== 'undefined') {
         bgMusic.pause();
         bgMusic.currentTime = 0;
     }
 
-    // 2. Reset toàn bộ state
     flowerBloomed = false;
     isZooming = false;
     isDraggingGalaxy = false;
@@ -3554,11 +3364,9 @@ function resetToGalaxyHome() {
     currentPerson = null;
     isGalleryEditing = false;
 
-    // 3. Hiện lại canvas WebGL (đã bị ẩn khi zoom vào sao)
     const webglContainer = document.getElementById('webgl-container');
     if (webglContainer) webglContainer.style.display = 'block';
 
-    // 4. Đưa camera về vị trí ban đầu
     if (camera) {
         const isMobile = window.innerWidth <= 768;
         camera.position.set(0, 0, isMobile ? 240 : 160);
@@ -3568,7 +3376,6 @@ function resetToGalaxyHome() {
         galaxyGroup.rotation.set(0, 0, 0);
     }
 
-    // 5. Reset màn hình hoa hồng / tulip
     const flowerScreen = document.getElementById('screen-flower');
     if (flowerScreen) flowerScreen.classList.remove('theme-tulip');
 
@@ -3588,11 +3395,9 @@ function resetToGalaxyHome() {
     const tulipCss = document.getElementById('tulip-css-container');
     if (tulipCss) tulipCss.style.display = 'none';
 
-    // 6. Reset phong bì thư
     const envContainer = document.getElementById('envelope-container');
     if (envContainer) envContainer.classList.remove('step-1', 'step-2', 'from-step-2');
 
-    // 7. Đóng modal & dừng video quà tặng nếu đang mở
     const videoModal = document.getElementById('video-modal');
     if (videoModal) videoModal.classList.add('hidden');
     const musicPopup = document.getElementById('music-popup-modal');
@@ -3600,22 +3405,18 @@ function resetToGalaxyHome() {
     const giftVideo = document.getElementById('gift-video');
     if (giftVideo) { giftVideo.pause(); giftVideo.currentTime = 0; }
 
-    // 8. Reset mật mã & ảnh đại diện đã hiển thị
     if (typeof updateDots === 'function') updateDots(0);
     const unlockError = document.getElementById('unlock-error');
     if (unlockError) unlockError.classList.add('hidden');
     const editBtn = document.getElementById('toggle-gallery-edit');
     if (editBtn) editBtn.classList.remove('visible');
-    // 9. Quay lại màn hình Galaxy
     transitionTo('galaxy');
 
-    // 10. Khởi động lại vòng lặp animation 3D
     setTimeout(() => {
         if (typeof animateGalaxy === 'function') animateGalaxy();
     }, 100);
 }
 
-// Gắn sự kiện khi DOM đã sẵn sàng
 document.addEventListener('DOMContentLoaded', () => {
     const backBtn = document.getElementById('back-to-galaxy-btn');
     if (backBtn) {
@@ -3626,23 +3427,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
-/* ========================================================
-   XỬ LÝ MÀN HÌNH CHỜ: ÉP FULLSCREEN & BẬT ÂM THANH
-======================================================== */
 document.addEventListener('DOMContentLoaded', () => {
     const startScreen = document.getElementById('start-screen');
 
     if (startScreen) {
-        // Khi người dùng chạm/click vào bất kỳ đâu trên màn hình chờ
         startScreen.addEventListener('click', function() {
-    // ============================================================
-    // A. UNLOCK AUDIO NGAY (gesture gốc) — play MUTED để iOS cho phép
-    // ============================================================
+    if (typeof getAudioContext === 'function') {
+        try { getAudioContext(); } catch (e) {}
+    }
     introMusic.muted = true;
-    introMusic.volume = 1; // Volume thật, sẽ dùng sau khi unmute
+    introMusic.volume = 1;
     try {
         if (introMusic.readyState >= 1) introMusic.currentTime = 0;
-    } catch (e) { /* bỏ qua */ }
+    } catch (e) { }
 
     const _p = introMusic.play();
     if (_p !== undefined) {
@@ -3655,14 +3452,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // AudioContext (cho các sound effect khác)
-    if (typeof getAudioContext === 'function') {
-        try { getAudioContext(); } catch (e) {}
-    }
-
-    // ============================================================
-    // B. REQUEST FULLSCREEN
-    // ============================================================
     const docEl = document.documentElement;
     let fsPromise = null;
     try {
@@ -3677,20 +3466,15 @@ document.addEventListener('DOMContentLoaded', () => {
         fsPromise = null;
     }
 
-    // ============================================================
-    // C. HÀM KHỞI ĐỘNG CINEMATIC (chỉ chạy 1 lần)
-    // ============================================================
     let started = false;
     function startCinematicNow() {
         if (started) return;
         started = true;
 
-        // Reset nhạc về 0 + UNMUTE — nhạc bắt đầu khớp chính xác với phase 1
         try { introMusic.currentTime = 0; } catch (e) {}
         introMusic.muted = false;
         introMusic.volume = 0.7;
 
-        // Delay ~120ms để browser settle layout sau fullscreen (tránh giật)
         setTimeout(() => {
             playCinematicIntro(() => {
                 console.log("Cinematic intro hoàn tất, sẵn sàng tương tác.");
@@ -3698,16 +3482,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 120);
     }
 
-    // Fallback: nếu fullscreen không tồn tại (iPhone Safari) hoặc fail
-    // → chạy sau 350ms
     const fallbackTimer = setTimeout(startCinematicNow, 350);
 
-    // ============================================================
-    // D. ĐỢI FULLSCREEN XONG RỒI MỚI CHẠY CINEMATIC
-    // ============================================================
     if (fsPromise && typeof fsPromise.then === 'function') {
         fsPromise.then(() => {
-            // Fullscreen đã vào — chờ event để chắc chắn layout đã ổn định
             const onFSChange = () => {
                 document.removeEventListener('fullscreenchange', onFSChange);
                 document.removeEventListener('webkitfullscreenchange', onFSChange);
@@ -3717,13 +3495,11 @@ document.addEventListener('DOMContentLoaded', () => {
             document.addEventListener('fullscreenchange', onFSChange, { once: true });
             document.addEventListener('webkitfullscreenchange', onFSChange, { once: true });
 
-            // Safety net: nếu event không fire (một số browser hiếm gặp)
             setTimeout(() => {
                 clearTimeout(fallbackTimer);
                 startCinematicNow();
             }, 600);
         }).catch(err => {
-            // Fullscreen bị từ chối → vẫn chạy cinematic bình thường
             console.warn("[Cinematic] Fullscreen bị từ chối:", err);
             clearTimeout(fallbackTimer);
             startCinematicNow();
